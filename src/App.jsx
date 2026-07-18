@@ -19,7 +19,7 @@ const App = () => {
       img: "public/Picture1.png",
       intro: "",
       tag: "Underbanked",
-    },
+    }
   ];
   return (
     <>

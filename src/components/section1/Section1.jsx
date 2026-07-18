@@ -3,7 +3,8 @@ import Navbar from "./Navbar";
 import Page1content from "./Page1content";
 
 const Section1 = (props) => {
-  console.log(props);
+console.log();
+
 
   return (
     <div className=" h-screen w-full">
