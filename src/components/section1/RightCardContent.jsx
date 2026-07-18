@@ -7,7 +7,7 @@ const RightCardContent = () => {
         1
       </h1>
       <div>
-        <p className="leading-normal text-lg mb-14 text-gray-900">
+        <p className="leading-normal text-lg mb-14 font- text-black">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero
           accusamus doloribus, vel ea eos!
         </p>
