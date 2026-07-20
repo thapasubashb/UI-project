@@ -12,10 +12,10 @@ const RightCardContent = (props) => {
           accusamus doloribus, vel ea eos!
         </p>
         <div className=" flex justify-between ">
-          <button className="bg-gray-500 text-white font-medium px-8 py-2 rounded-full">
+          <button style={{backgroundColor:props.color}} className="  text-white font-medium px-8 py-2 rounded-full">
             {props.tag}
           </button>
-          <button className="bg-gray-500 text-white font-medium px-3 py-2 rounded-full ">
+          <button className=" text-white font-medium px-3 py-2 rounded-full ">
             <i class="ri-arrow-right-line"></i>
           </button>
         </div>
