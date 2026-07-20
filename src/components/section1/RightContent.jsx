@@ -6,9 +6,9 @@ const RightContent = (props) => {
  
   
   return (
-    <div className=" flex flex-nowrap gap-10 overflow-x-auto h-full  p-5  w-2/3">
-      {props.users.map(function(elem){
-        return <RightCard img={elem.img}/>
+    <div  id="right" className=" flex flex-nowrap gap-10 overflow-x-auto h-full  p-5  w-2/3">
+      {props.users.map(function(elem,idx){
+        return <RightCard ley={idx} id={idx} img={elem.img} tag={elem.tag}/>
       })};
     </div>
   );

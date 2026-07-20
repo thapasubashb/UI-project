@@ -4,7 +4,7 @@ import RightContent from "./RightContent";
 
 const Page1content = (props) => {
   return (
-    <div className="   py-10 px-18 flex iteams-center justify-between h-[90vh] gap-10">
+    <div className="pb-9 px-18 flex iteams-center justify-between h-[90vh] gap-10">
       <LeftContent />
       <RightContent users={props.users} />
     </div>

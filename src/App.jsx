@@ -7,7 +7,7 @@ const App = () => {
     {
       img: "public/martin-katler-MoQ7XG0u5QU-unsplash.jpg",
       intro: "",
-      tag: "UndersSrved",
+      tag: "UndersSatisfied",
     },
     {
       img: "public/WhatsApp Image 2026-07-13 at 12.40.05 PM.jpeg",
