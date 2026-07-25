@@ -144,3 +144,40 @@ const Section2 = () => {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Dynamic Detail Panel */}
+        <div className="p-6 md:p-8 rounded-2xl bg-slate-900 text-slate-100 border border-slate-800 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300">
+          <div className="space-y-1 max-w-2xl">
+            <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">
+              Selected Focus &bull; {features[activeFeature].title}
+            </div>
+            <p className="text-slate-300 text-sm md:text-base">
+              {features[activeFeature].details}
+            </p>
+          </div>
+          <a
+            href="#docs"
+            className="whitespace-nowrap px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm"
+          >
+            Read Documentation
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Section2;
