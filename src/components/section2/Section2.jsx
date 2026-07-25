@@ -158,26 +158,21 @@ const Section2 = () => {
           })}
         </div>
 
-        {/* Dynamic Detail Panel */}
-        <div className="p-6 md:p-8 rounded-2xl bg-slate-900 text-slate-100 border border-slate-800 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300">
-          <div className="space-y-1 max-w-2xl">
-            <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">
-              Selected Focus &bull; {features[activeFeature].title}
-            </div>
-            <p className="text-slate-300 text-sm md:text-base">
-              {features[activeFeature].details}
-            </p>
-          </div>
-          <a
-            href="#docs"
-            className="whitespace-nowrap px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm"
-          >
-            Read Documentation
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-};
-
+{/* Dynamic Detail Panel */}
+<div className="p-6 md:p-8 rounded-2xl bg-white text-slate-900 border border-slate-200/80 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300">
+  <div className="space-y-1 max-w-2xl">
+    <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+      Selected Focus &bull; {features[activeFeature].title}
+    </div>
+    <p className="text-slate-600 text-sm md:text-base">
+      {features[activeFeature].details}
+    </p>
+  </div>
+  <a
+    href="#docs"
+    className="whitespace-nowrap px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm"
+  >
+    Read Documentation
+  </a>
+</div>
 export default Section2;
