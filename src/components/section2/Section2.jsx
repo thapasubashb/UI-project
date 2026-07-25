@@ -158,7 +158,7 @@ const Section2 = () => {
           })}
         </div>
 
-{/* Dynamic Detail Panel */}
+      {/* Dynamic Detail Panel */}
 <div className="p-6 md:p-8 rounded-2xl bg-white text-slate-900 border border-slate-200/80 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300">
   <div className="space-y-1 max-w-2xl">
     <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
@@ -175,4 +175,9 @@ const Section2 = () => {
     Read Documentation
   </a>
 </div>
+      </div>
+    </section>
+  );
+};
+
 export default Section2;
