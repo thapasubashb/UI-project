@@ -164,4 +164,28 @@ const Section2 = () => {
           })}
         </div>
 
+        {/* Dynamic Detail Panel */}
+        <div className="p-6 md:p-8 rounded-2xl bg-white/90 border border-sky-200 shadow-[0_0_30px_rgba(56,189,248,0.15)] backdrop-blur-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300 relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-400 to-blue-600" />
+          <div className="space-y-1 max-w-2xl pl-2">
+            <div className="text-xs font-semibold text-sky-600 uppercase tracking-wider flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-ping" />
+              Selected Focus &bull; {features[activeFeature].title}
+            </div>
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+              {features[activeFeature].details}
+            </p>
+          </div>
+          <a
+            href="#docs"
+            className="whitespace-nowrap px-6 py-2.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white rounded-xl text-sm font-semibold transition-all shadow-[0_0_15px_rgba(56,189,248,0.35)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] active:scale-95"
+          >
+            Read Documentation
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default Section2;
