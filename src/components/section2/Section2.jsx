@@ -14,7 +14,7 @@ const Section2 = () => {
         "Edge-cached content delivery coupled with serverless execution keeps TTFB minimal globally.",
       icon: (
         <svg
-          className="w-6 h-6 text-indigo-600 dark:text-indigo-400"
+          className="w-6 h-6 text-sky-400 group-hover:text-cyan-300 transition-colors"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -38,7 +38,7 @@ const Section2 = () => {
         "Automated compliance checks, granular RBAC permissions, and real-time threat prevention.",
       icon: (
         <svg
-          className="w-6 h-6 text-indigo-600 dark:text-indigo-400"
+          className="w-6 h-6 text-sky-400 group-hover:text-cyan-300 transition-colors"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -62,7 +62,7 @@ const Section2 = () => {
         "Stream events directly into your warehouse with sub-second event processing pipelines.",
       icon: (
         <svg
-          className="w-6 h-6 text-indigo-600 dark:text-indigo-400"
+          className="w-6 h-6 text-sky-400 group-hover:text-cyan-300 transition-colors"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -79,103 +79,15 @@ const Section2 = () => {
   ];
 
   return (
-    <section className="min-h-screen w-full bg-slate-50 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden">
-      {/* Background Decorator Grid & Glows */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-200/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl pointer-events-none" />
+    <section className="min-h-screen w-full bg-[#0d1117] text-slate-100 flex items-center justify-center py-24 px-6 relative overflow-hidden font-sans">
+      {/* Background Decorator Grids & Glowing Light Blue Orbs */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293d_1px,transparent_1px),linear-gradient(to_bottom,#1f293d_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+      
+      {/* Dynamic Glowing Aura */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-500/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 -left-40 w-80 h-80 bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto w-full z-10 space-y-16">
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-50 border border-indigo-200/80 rounded-full shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
-            Built For Growth
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-            Everything you need to build faster
-          </h2>
-          <p className="text-lg text-slate-600">
-            Empower your workflow with a modern tech stack engineered for scale, reliability, and speed.
-          </p>
-        </div>
-
-        {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const isSelected = activeFeature === index;
-            return (
-              <div
-                key={feature.id}
-                onClick={() => setActiveFeature(index)}
-                className={`group cursor-pointer p-8 rounded-2xl bg-white/80 backdrop-blur-sm border transition-all duration-300 shadow-sm flex flex-col justify-between relative ${
-                  isSelected
-                    ? "border-indigo-500 ring-2 ring-indigo-500/20 shadow-lg -translate-y-1"
-                    : "border-slate-200 hover:border-indigo-300 hover:shadow-md hover:-translate-y-0.5"
-                }`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    {/* Icon Container */}
-                    <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center group-hover:scale-105 group-hover:bg-indigo-100/80 transition-all duration-300">
-                      {feature.icon}
-                    </div>
-                    {/* Dynamic Stat Pill */}
-                    <span className="text-xs font-medium text-indigo-600 bg-indigo-50/80 px-2.5 py-1 rounded-full border border-indigo-100">
-                      {feature.stat}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">
-                    {feature.description}
-                  </p>
-                </div>
-
-                {/* Interactive Link */}
-                <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-sm font-semibold text-indigo-600 group-hover:text-indigo-700 flex items-center gap-1">
-                    Explore feature
-                    <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-      {/* Dynamic Detail Panel */}
-<div className="p-6 md:p-8 rounded-2xl bg-white text-slate-900 border border-slate-200/80 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300">
-  <div className="space-y-1 max-w-2xl">
-    <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">
-      Selected Focus &bull; {features[activeFeature].title}
-    </div>
-    <p className="text-slate-600 text-sm md:text-base">
-      {features[activeFeature].details}
-    </p>
-  </div>
-  <a
-    href="#docs"
-    className="whitespace-nowrap px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm"
-  >
-    Read Documentation
-  </a>
-</div>
-      </div>
     </section>
   );
 };
