@@ -71,8 +71,31 @@ const Section3 = () => {
                 <svg
                   className="w-5 h-5 text-slate-700"
                   fill="none"
-
-                  
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">
+                  Fast and Lightweight
+                </h3>
+                <p className="text-sm text-slate-600">
+                  A clean structure that remains elegant and responsive on every
+                  screen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
