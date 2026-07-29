@@ -2,7 +2,7 @@ import React from "react";
 
 const Section3 = () => {
   return (
-    <section className="min-h-screen w-full bg-slate-50/80 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden font-sans">
+    <section className="min-h-screen w-full bg-gradient-to-br from-white via-slate-50 to-slate-100 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden font-sans">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 pointer-events-none" />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-200/60 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-1/3 -left-40 w-80 h-80 bg-blue-200/50 rounded-full blur-[100px] pointer-events-none" />
@@ -15,8 +15,10 @@ const Section3 = () => {
             Minimal by Design
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900">
-            Simple & Clean Design
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
+              Simple &amp; Clean Design
+            </span>
           </h2>
 
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
