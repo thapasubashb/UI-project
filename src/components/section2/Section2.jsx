@@ -83,7 +83,20 @@ const Section2 = () => {
     },
   ];
 
-  
+  const categories = ["all", "Speed", "Protection", "Insights"];
+
+  const filteredFeatures = useMemo(() => {
+    return features.filter((item) => {
+      const matchesCategory =
+        selectedCategory === "all" || item.category === selectedCategory;
+      const matchesSearch =
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }, [searchQuery, selectedCategory]);
+
+  const activeItem = features[activeFeature] || features[0];
 
   return (
     <section className="min-h-screen w-full bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden font-sans">
