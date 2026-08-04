@@ -61,7 +61,37 @@ const Section3 = () => {
           </p>
         </div>
 
-
+        {/* 2-Column Functional Interactive Layout */}
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          {/* Column 1: Feature Selector Tabs */}
+          <div className="space-y-4 flex flex-col justify-center">
+            {features.map((feature, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveTab(idx)}
+                className={`w-full text-left transition-all duration-300 p-6 rounded-3xl border backdrop-blur-xl ${
+                  activeTab === idx
+                    ? "border-sky-300 bg-white shadow-[0_0_30px_rgba(56,189,248,0.2)] scale-[1.02]"
+                    : "border-slate-200/80 bg-white/60 hover:bg-white/90"
+                }`}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full border border-sky-100">
+                    {feature.tag}
+                  </span>
+                  <span
+                    className={`text-xs font-semibold ${
+                      activeTab === idx ? "text-sky-600" : "text-slate-400"
+                    }`}
+                  >
+                    0{idx + 1}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  {feature.title}
+                </h3>
+              </button>
+            ))}
 
             {/* Actions Bar moved below selection */}
             <div className="flex flex-wrap gap-4 pt-4">
