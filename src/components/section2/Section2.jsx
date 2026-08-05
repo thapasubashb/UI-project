@@ -99,32 +99,30 @@ const Section2 = () => {
   const activeItem = features[activeFeature] || features[0];
 
   return (
-    <section className="min-h-screen w-full bg-slate-950 text-slate-100 py-24 px-6 relative overflow-hidden font-sans">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_28%)] pointer-events-none" />
-      <div className="absolute inset-x-0 top-16 flex justify-center pointer-events-none">
-        <div className="w-125 h-80 rounded-full bg-sky-500/10 blur-[90px]" />
-      </div>
+    <section className="min-h-screen w-full bg-slate-50 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden">
+      {/* Background Decorator Grid & Glows */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-200/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full space-y-16">
-        <header className="text-center max-w-3xl mx-auto space-y-5">
-          <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider uppercase rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/20">
-            <span className="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse" />
-            Feature gateway
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-50 border border-indigo-200/80 rounded-full shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
+            Built For Growth
           </span>
-          <div className="space-y-3">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-              Reimagined product structure for faster decisions
-            </h2>
-            <p className="mx-auto max-w-2xl text-sm md:text-base text-slate-300 leading-relaxed">
-              Browse the best capabilities, filter by category, and dive into
-              the feature details that matter most for your team.
-            </p>
-          </div>
-        </header>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+            Everything you need to build faster
+          </h2>
+          <p className="text-lg text-slate-600">
+            Empower your workflow with a modern tech stack engineered for scale,
+            reliability, and speed.
+          </p>
+        </div>
 
         <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] items-start">
           <div className="space-y-6">
-            <div className="rounded-4xl border border-slate-800/80 bg-slate-900/90 p-6 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.8)] backdrop-blur-sm">
+            <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {categories.map((cat) => (
