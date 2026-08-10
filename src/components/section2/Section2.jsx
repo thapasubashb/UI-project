@@ -129,10 +129,11 @@ const Section2 = () => {
                     <button
                       key={cat}
                       onClick={() => setSelectedCategory(cat)}
-                      className={`rounded-full px-4 py-2 text-[11px] font-semibold transition-colors duration-200 ${
+                      aria-pressed={selectedCategory === cat}
+                      className={`rounded-full px-4 py-2 text-[12px] font-semibold transition-all duration-200 border ${
                         selectedCategory === cat
-                          ? "bg-sky-400 text-slate-950 shadow-lg shadow-sky-500/10"
-                          : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+                          ? "bg-gradient-to-r from-sky-500 to-indigo-500 text-white shadow-md border-transparent"
+                          : "bg-transparent text-slate-700 border-slate-200 hover:bg-slate-100"
                       }`}
                     >
                       {cat}
@@ -146,10 +147,11 @@ const Section2 = () => {
                     placeholder="Search features"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full rounded-3xl border border-slate-800 bg-slate-900/95 px-12 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"
+                    className="w-full rounded-full border border-slate-200 bg-white px-12 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-sky-300 focus:outline-none"
+                    aria-label="Search features"
                   />
                   <svg
-                    className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500"
+                    className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -181,29 +183,30 @@ const Section2 = () => {
                     <button
                       key={feature.id}
                       onClick={() => setActiveFeature(indexInOriginal)}
-                      className={`group flex flex-col gap-4 rounded-4xl border p-6 text-left transition-all duration-300 ${
+                      aria-pressed={isSelected}
+                      className={`group flex flex-col gap-4 rounded-2xl border p-5 text-left transition-transform duration-200 ${
                         isSelected
-                          ? "border-sky-400 bg-sky-500/10 shadow-[0_25px_60px_-40px_rgba(14,165,233,0.8)]"
-                          : "border-slate-800 bg-slate-900/90 hover:border-slate-600"
+                          ? "border-transparent ring-1 ring-sky-300 bg-white shadow-lg scale-[1.02]"
+                          : "border-slate-200 bg-white hover:shadow-sm hover:-translate-y-1"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-800 text-sky-400">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 text-sky-600">
                           {feature.icon}
                         </div>
-                        <span className="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">
+                        <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700">
                           {feature.category}
                         </span>
                       </div>
-                      <div className="space-y-3">
-                        <h3 className="text-lg font-semibold text-white">
+                      <div className="space-y-2">
+                        <h3 className="text-lg font-semibold text-slate-900">
                           {feature.title}
                         </h3>
-                        <p className="text-sm leading-6 text-slate-400">
+                        <p className="text-sm leading-6 text-slate-600">
                           {feature.description}
                         </p>
                       </div>
-                      <span className="self-start rounded-full bg-slate-800 px-3 py-1 text-[11px] font-semibold text-slate-300">
+                      <span className="self-start rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">
                         {feature.stat}
                       </span>
                     </button>
@@ -213,57 +216,57 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-4xl border border-slate-800 bg-slate-900/95 p-8 shadow-[0_35px_120px_-60px_rgba(15,23,42,0.9)]">
+          <div className="rounded-4xl border border-slate-200 bg-white p-8 shadow-md">
             <div className="flex items-start gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-800 text-sky-400">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-sky-600">
                 {activeItem.icon}
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className="rounded-full bg-slate-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">
+                  <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700">
                     {activeItem.category}
                   </span>
-                  <span className="text-xs font-semibold text-sky-300/80">
+                  <span className="text-xs font-semibold text-slate-500">
                     {activeItem.stat}
                   </span>
                 </div>
-                <h3 className="text-3xl font-extrabold text-white">
+                <h3 className="text-3xl font-extrabold text-slate-900">
                   {activeItem.title}
                 </h3>
               </div>
             </div>
 
             <div className="mt-8 space-y-6">
-              <div className="space-y-3 rounded-[1.75rem] border border-slate-800 bg-slate-950/70 p-6">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+              <div className="space-y-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-700">
                   Summary
                 </h4>
-                <p className="text-sm leading-7 text-slate-300">
+                <p className="text-sm leading-7 text-slate-600">
                   {activeItem.description}
                 </p>
               </div>
 
-              <div className="space-y-3 rounded-[1.75rem] border border-slate-800 bg-slate-950/70 p-6">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-300">
+              <div className="space-y-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-700">
                   Why it matters
                 </h4>
-                <p className="text-sm leading-7 text-slate-300">
+                <p className="text-sm leading-7 text-slate-600">
                   {activeItem.details}
                 </p>
               </div>
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-sm text-slate-400">
+              <span className="text-sm text-slate-600">
                 Ready to integrate{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-slate-900">
                   {activeItem.title}
                 </span>
                 ?
               </span>
               <a
                 href="#docs"
-                className="inline-flex items-center justify-center rounded-full bg-sky-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-95"
               >
                 Read Documentation
               </a>
