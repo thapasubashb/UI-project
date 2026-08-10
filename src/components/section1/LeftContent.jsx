@@ -4,7 +4,7 @@ import HeroText from "./HeroText";
 import Arrow from "./Arrow";
 const LeftContent = () => {
   return (
-    <div className=" flex flex-col justify-between h-full w-1/3 ">
+    <div className="flex flex-col justify-center h-full w-full gap-6">
       <HeroText />
       <Arrow />
     </div>

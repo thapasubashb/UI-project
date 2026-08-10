@@ -4,9 +4,13 @@ import RightContent from "./RightContent";
 
 const Page1content = (props) => {
   return (
-    <div className="pb-16 pt-5 px-8 flex items-center justify-between h-[90vh] gap-10">
-      <LeftContent />
-      <RightContent users={props.users} />
+    <div className="min-h-[85vh] py-12 px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div className="order-1 md:order-1">
+        <LeftContent />
+      </div>
+      <div className="order-2 md:order-2">
+        <RightContent users={props.users} />
+      </div>
     </div>
   );
 };
