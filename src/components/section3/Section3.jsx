@@ -72,41 +72,47 @@ const Section3 = () => {
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 aria-pressed={activeTab === idx}
-                className={`w-full text-left transition-transform duration-200 p-5 rounded-2xl border ${
+                className={`group w-full text-left transition-all duration-300 p-6 rounded-2xl border transform hover:scale-105 ${
                   activeTab === idx
-                    ? "bg-gradient-to-r from-sky-50 to-indigo-50 ring-1 ring-sky-200 shadow-md scale-[1.02] border-transparent"
-                    : "bg-white border-slate-100 hover:shadow-sm hover:-translate-y-1"
+                    ? "bg-gradient-to-br from-sky-50 to-indigo-50 ring-2 ring-sky-400 shadow-xl shadow-sky-200/50 scale-105 border-transparent"
+                    : "bg-white border-slate-200 hover:shadow-lg hover:border-sky-200"
                 }`}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full border border-sky-100">
+                <div className="flex items-center justify-between mb-3">
+                  <span
+                    className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-all ${
+                      activeTab === idx
+                        ? "bg-sky-200 text-sky-800 border-sky-300"
+                        : "bg-sky-50 text-sky-700 border-sky-100 group-hover:bg-sky-100"
+                    }`}
+                  >
                     {feature.tag}
                   </span>
                   <span
-                    className={`text-xs font-semibold ${
+                    className={`text-sm font-bold transition-colors ${
                       activeTab === idx ? "text-sky-600" : "text-slate-400"
                     }`}
                   >
                     0{idx + 1}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
+                <h3 className="text-xl font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="mt-2 text-sm text-slate-600 hidden sm:block">
+                <p className="mt-3 text-sm text-slate-600 hidden sm:block group-hover:text-slate-700 transition-colors">
                   {feature.description}
                 </p>
               </button>
             ))}
 
             {/* Actions Bar moved below selection */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="flex-1 px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-[0_0_15px_rgba(56,189,248,0.35)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] transition-all duration-300 active:scale-95 text-center">
+            <div className="flex flex-wrap gap-4 pt-6">
+              <button className="flex-1 px-6 py-3 bg-gradient-to-r from-sky-500 via-indigo-500 to-blue-600 hover:from-sky-600 hover:via-indigo-600 hover:to-blue-700 text-white font-bold rounded-xl shadow-lg shadow-sky-300/50 hover:shadow-xl hover:shadow-sky-400/60 transition-all duration-300 active:scale-95 text-center transform hover:scale-105">
                 Get Started
               </button>
               <a
                 href="#learn-more"
-                className="flex-1 px-6 py-3 border border-slate-200 bg-white/80 backdrop-blur-xl text-slate-700 font-semibold rounded-xl hover:border-sky-300 hover:text-sky-700 transition-all duration-300 text-center"
+                className="flex-1 px-6 py-3 border-2 border-sky-300 bg-white text-sky-700 font-bold rounded-xl hover:bg-sky-50 hover:border-sky-400 transition-all duration-300 text-center transform hover:scale-105"
               >
                 Learn More
               </a>
@@ -114,11 +120,11 @@ const Section3 = () => {
           </div>
 
           {/* Column 2: Active Feature Display Panel */}
-          <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-md flex flex-col justify-center relative min-h-[280px]">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-500 flex items-center justify-center text-white shadow-sm">
+          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-center relative min-h-[400px]">
+            <div className="flex items-center gap-6 mb-8">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 via-indigo-500 to-blue-600 flex items-center justify-center text-white shadow-lg transform transition-transform hover:scale-110">
                 <svg
-                  className="w-7 h-7"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -126,25 +132,25 @@ const Section3 = () => {
                   {features[activeTab].icon}
                 </svg>
               </div>
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
-                  Selected Focus
+              <div className="flex-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-100 px-3 py-1 rounded-full inline-block">
+                  ✨ Selected Focus
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900">
+                <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 leading-tight">
                   {features[activeTab].title}
                 </h3>
               </div>
             </div>
 
-            <p className="text-slate-600 text-base leading-relaxed">
+            <p className="text-slate-700 text-lg leading-8 font-medium mb-8">
               {features[activeTab].description}
             </p>
 
-            <div className="mt-6 flex gap-4">
-              <button className="px-5 py-3 bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-lg font-semibold shadow-sm">
-                Explore Docs
+            <div className="mt-auto flex flex-col sm:flex-row gap-4">
+              <button className="flex-1 px-6 py-3.5 bg-gradient-to-r from-sky-500 to-indigo-600 text-white rounded-lg font-bold shadow-lg shadow-sky-300/50 hover:shadow-xl hover:shadow-sky-400/60 transition-all active:scale-95 transform hover:scale-105">
+                Explore Docs →
               </button>
-              <button className="px-5 py-3 border border-slate-200 rounded-lg text-slate-700 font-semibold bg-white/60">
+              <button className="flex-1 px-6 py-3.5 border-2 border-sky-300 rounded-lg text-sky-700 font-bold bg-sky-50 hover:bg-sky-100 hover:border-sky-400 transition-all transform hover:scale-105">
                 Start Trial
               </button>
             </div>
