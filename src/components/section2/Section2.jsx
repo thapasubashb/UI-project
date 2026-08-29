@@ -144,17 +144,17 @@ const Section2 = () => {
                   ))}
                 </div>
 
-                <div className="relative w-full max-w-sm">
+                <div className="relative w-full lg:max-w-sm">
                   <input
                     type="text"
-                    placeholder="Search features"
+                    placeholder="Search features..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full rounded-full border border-slate-200 bg-white px-12 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-sky-300 focus:outline-none"
+                    className="w-full rounded-full border border-slate-300 bg-white px-12 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-sky-400 focus:border-transparent focus:outline-none shadow-sm transition-all"
                     aria-label="Search features"
                   />
                   <svg
-                    className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -170,10 +170,12 @@ const Section2 = () => {
               </div>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {filteredFeatures.length === 0 ? (
-                <div className="rounded-4xl border border-dashed border-slate-700 bg-slate-900/80 p-8 text-center text-slate-400">
-                  No matching features found.
+                <div className="col-span-full rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-12 text-center">
+                  <p className="text-slate-500 font-medium">
+                    No matching features found.
+                  </p>
                 </div>
               ) : (
                 filteredFeatures.map((feature) => {
@@ -187,29 +189,47 @@ const Section2 = () => {
                       key={feature.id}
                       onClick={() => setActiveFeature(indexInOriginal)}
                       aria-pressed={isSelected}
-                      className={`group flex flex-col gap-4 rounded-2xl border p-5 text-left transition-transform duration-200 ${
+                      className={`group flex flex-col gap-4 rounded-2xl border p-6 text-left transition-all duration-300 transform hover:scale-105 ${
                         isSelected
-                          ? "border-transparent ring-1 ring-sky-300 bg-white shadow-lg scale-[1.02]"
-                          : "border-slate-200 bg-white hover:shadow-sm hover:-translate-y-1"
+                          ? "border-transparent ring-2 ring-sky-400 bg-gradient-to-br from-sky-50 to-indigo-50 shadow-xl shadow-sky-200/50 scale-105"
+                          : "border-slate-200 bg-white hover:shadow-lg hover:border-sky-200"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 text-sky-600">
+                        <div
+                          className={`flex h-14 w-14 items-center justify-center rounded-xl transition-all ${
+                            isSelected
+                              ? "bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg"
+                              : "bg-sky-50 text-sky-600 group-hover:bg-sky-100"
+                          }`}
+                        >
                           {feature.icon}
                         </div>
-                        <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700">
+                        <span
+                          className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-all ${
+                            isSelected
+                              ? "bg-sky-200 text-sky-800"
+                              : "bg-slate-100 text-slate-700"
+                          }`}
+                        >
                           {feature.category}
                         </span>
                       </div>
                       <div className="space-y-2">
-                        <h3 className="text-lg font-semibold text-slate-900">
+                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
                           {feature.title}
                         </h3>
-                        <p className="text-sm leading-6 text-slate-600">
+                        <p className="text-sm leading-6 text-slate-600 group-hover:text-slate-700">
                           {feature.description}
                         </p>
                       </div>
-                      <span className="self-start rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">
+                      <span
+                        className={`self-start rounded-full px-3 py-1.5 text-[11px] font-bold tracking-wider transition-all ${
+                          isSelected
+                            ? "bg-sky-300 text-sky-900"
+                            : "bg-slate-100 text-slate-700"
+                        }`}
+                      >
                         {feature.stat}
                       </span>
                     </button>
