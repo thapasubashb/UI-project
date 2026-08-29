@@ -112,27 +112,31 @@ const Section2 = () => {
             Built For Growth
           </span>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">Everything you need</span> to build faster
+            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
+              Everything you need
+            </span>{" "}
+            to build faster
           </h2>
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Empower your workflow with a modern tech stack engineered for scale, reliability, and lightning-fast performance.
+            Empower your workflow with a modern tech stack engineered for scale,
+            reliability, and lightning-fast performance.
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] items-start">
           <div className="space-y-6">
-            <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm">
+            <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {categories.map((cat) => (
                     <button
                       key={cat}
                       onClick={() => setSelectedCategory(cat)}
                       aria-pressed={selectedCategory === cat}
-                      className={`rounded-full px-4 py-2 text-[12px] font-semibold transition-all duration-200 border ${
+                      className={`rounded-full px-5 py-2.5 text-[12px] font-bold transition-all duration-300 border transform hover:scale-105 ${
                         selectedCategory === cat
-                          ? "bg-gradient-to-r from-sky-500 to-indigo-500 text-white shadow-md border-transparent"
-                          : "bg-transparent text-slate-700 border-slate-200 hover:bg-slate-100"
+                          ? "bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-sky-300/50 border-transparent"
+                          : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
                       }`}
                     >
                       {cat}
