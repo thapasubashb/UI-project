@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 const Section3 = () => {
@@ -44,21 +43,23 @@ const Section3 = () => {
 
       <div className="max-w-6xl mx-auto w-full z-10 space-y-12">
         {/* Top Header Section */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-sky-700 uppercase bg-sky-50 border border-sky-200 rounded-full shadow-[0_0_15px_rgba(56,189,248,0.25)] backdrop-blur-md">
+        <div className="text-center max-w-3xl mx-auto space-y-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider text-sky-700 uppercase bg-gradient-to-r from-sky-50 to-cyan-50 border border-sky-200 rounded-full shadow-lg hover:shadow-xl backdrop-blur-md transition-shadow">
             <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse shadow-[0_0_8px_#38bdf8]" />
             Minimal by Design
           </span>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
             <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
-              Simple &amp; Clean Design
+              Simple &amp; Clean
             </span>
+            <br />
+            <span className="text-slate-900">Design System</span>
           </h2>
 
-          <p className="text-lg text-slate-600 leading-relaxed">
-            A minimalist layout on a crisp white background. Perfect for modern
-            landing pages, portfolios, or product showcases.
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            A minimalist layout built for modern landing pages, portfolios, and
+            product showcases with perfect spacing and typography.
           </p>
         </div>
 

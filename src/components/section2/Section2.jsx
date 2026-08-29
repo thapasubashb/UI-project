@@ -239,59 +239,59 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-4xl border border-slate-200 bg-white p-8 shadow-md">
-            <div className="flex items-start gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 text-sky-600">
+          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="flex items-start gap-4 mb-8">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg transform transition-transform group-hover:scale-110">
                 {activeItem.icon}
               </div>
-              <div className="space-y-2">
+              <div className="space-y-3 flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700">
+                  <span className="rounded-full bg-sky-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-sky-700">
                     {activeItem.category}
                   </span>
-                  <span className="text-xs font-semibold text-slate-500">
+                  <span className="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
                     {activeItem.stat}
                   </span>
                 </div>
-                <h3 className="text-3xl font-extrabold text-slate-900">
+                <h3 className="text-4xl font-extrabold text-slate-900 leading-tight">
                   {activeItem.title}
                 </h3>
               </div>
             </div>
 
             <div className="mt-8 space-y-6">
-              <div className="space-y-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-700">
-                  Summary
+              <div className="space-y-3 rounded-2xl border border-sky-200/50 bg-gradient-to-br from-sky-50 to-indigo-50 p-6 hover:border-sky-300 transition-colors">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-sky-700">
+                  ✨ Summary
                 </h4>
-                <p className="text-sm leading-7 text-slate-600">
+                <p className="text-base leading-7 text-slate-700 font-medium">
                   {activeItem.description}
                 </p>
               </div>
 
-              <div className="space-y-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
-                <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-700">
-                  Why it matters
+              <div className="space-y-3 rounded-2xl border border-indigo-200/50 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 hover:border-indigo-300 transition-colors">
+                <h4 className="text-sm font-bold uppercase tracking-wider text-indigo-700">
+                  💡 Why it matters
                 </h4>
-                <p className="text-sm leading-7 text-slate-600">
+                <p className="text-base leading-7 text-slate-700 font-medium">
                   {activeItem.details}
                 </p>
               </div>
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-sm text-slate-600">
+              <span className="text-base text-slate-700 font-medium">
                 Ready to integrate{" "}
-                <span className="font-semibold text-slate-900">
+                <span className="font-bold text-sky-600">
                   {activeItem.title}
                 </span>
                 ?
               </span>
               <a
                 href="#docs"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 px-8 py-3 text-base font-bold text-white transition-all hover:shadow-lg hover:shadow-sky-300/50 active:scale-95"
               >
-                Read Documentation
+                Read Documentation →
               </a>
             </div>
           </div>
