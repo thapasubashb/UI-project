@@ -106,17 +106,16 @@ const Section2 = () => {
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full space-y-16">
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-50 border border-indigo-200/80 rounded-full shadow-sm">
+        <div className="text-center max-w-3xl mx-auto space-y-6">
+          <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200/80 rounded-full shadow-md hover:shadow-lg transition-shadow">
             <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
             Built For Growth
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-            Everything you need to build faster
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">Everything you need</span> to build faster
           </h2>
-          <p className="text-lg text-slate-600">
-            Empower your workflow with a modern tech stack engineered for scale,
-            reliability, and speed.
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Empower your workflow with a modern tech stack engineered for scale, reliability, and lightning-fast performance.
           </p>
         </div>
 
