@@ -99,21 +99,21 @@ const Section2 = () => {
   const activeItem = features[activeFeature] || features[0];
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#142238] px-6 py-24 text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(30deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:5rem_5rem]" />
-      <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-[#f2a65a]/15 blur-3xl" />
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-6 py-24 text-[#172033]">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(23,32,51,0.04)_1px,transparent_1px),linear-gradient(30deg,rgba(23,32,51,0.03)_1px,transparent_1px)] bg-[size:5rem_5rem]" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-[#f2d98a]/35 blur-3xl" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
         <div className="max-w-3xl space-y-5">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#f2a65a]">
-            <span className="h-2 w-2 rounded-full bg-[#f2a65a]" />
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#e1873d]">
+            <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
             02 / Platform capabilities
           </span>
-          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
+          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-[#172033] md:text-6xl">
             The infrastructure behind{" "}
-            <span className="text-[#f2a65a]">better decisions.</span>
+            <span className="text-[#e1873d]">better decisions.</span>
           </h2>
-          <p className="max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
+          <p className="max-w-2xl text-base leading-7 text-[#526078] md:text-lg">
             Explore the systems that keep every customer interaction fast,
             protected, and measurable.
           </p>
@@ -121,7 +121,7 @@ const Section2 = () => {
 
         <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] items-start">
           <div className="space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-4 shadow-2xl backdrop-blur-sm">
+            <div className="rounded-2xl border border-[#172033]/10 bg-white/75 p-4 shadow-xl backdrop-blur-sm">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {categories.map((cat) => (
@@ -131,8 +131,8 @@ const Section2 = () => {
                       aria-pressed={selectedCategory === cat}
                       className={`rounded-lg border px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-wider transition-all duration-300 ${
                         selectedCategory === cat
-                          ? "border-[#f2a65a] bg-[#f2a65a] text-[#142238] shadow-lg shadow-[#f2a65a]/20"
-                          : "border-white/10 bg-white/5 text-slate-300 hover:border-white/30 hover:bg-white/10"
+                          ? "border-[#e1873d] bg-[#e1873d] text-white shadow-lg shadow-[#e1873d]/20"
+                          : "border-[#172033]/10 bg-[#f4f7fb] text-[#526078] hover:border-[#e1873d]/50 hover:bg-white"
                       }`}
                     >
                       {cat}
@@ -146,11 +146,11 @@ const Section2 = () => {
                     placeholder="Search features..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full rounded-lg border border-white/10 bg-white/10 px-12 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all focus:border-[#f2a65a] focus:ring-1 focus:ring-[#f2a65a]"
+                    className="w-full rounded-lg border border-[#172033]/10 bg-[#f4f7fb] px-12 py-3 text-sm text-[#172033] placeholder:text-[#7d899a] outline-none transition-all focus:border-[#e1873d] focus:ring-1 focus:ring-[#e1873d]"
                     aria-label="Search features"
                   />
                   <svg
-                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#7d899a]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -187,16 +187,16 @@ const Section2 = () => {
                       aria-pressed={isSelected}
                       className={`group flex flex-col gap-4 rounded-2xl border p-6 text-left transition-all duration-300 transform hover:scale-105 ${
                         isSelected
-                          ? "border-[#f2a65a] bg-[#f2a65a] text-[#142238] shadow-xl shadow-[#f2a65a]/20"
-                          : "border-white/10 bg-white/[0.07] text-white hover:border-white/30 hover:bg-white/10"
+                          ? "border-[#e1873d] bg-[#e1873d] text-white shadow-xl shadow-[#e1873d]/20"
+                          : "border-[#172033]/10 bg-white text-[#172033] hover:border-[#e1873d]/50 hover:bg-white"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div
                           className={`flex h-14 w-14 items-center justify-center rounded-xl transition-all ${
                             isSelected
-                              ? "bg-[#142238] text-[#f2a65a] shadow-lg"
-                              : "bg-white/10 text-[#f2a65a] group-hover:bg-white/20"
+                              ? "bg-[#172033] text-[#f2d98a] shadow-lg"
+                              : "bg-[#f2d98a]/35 text-[#e1873d] group-hover:bg-[#f2d98a]/60"
                           }`}
                         >
                           {feature.icon}
@@ -204,8 +204,8 @@ const Section2 = () => {
                         <span
                           className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-all ${
                             isSelected
-                              ? "bg-[#142238]/10 text-[#142238]"
-                              : "bg-white/10 text-slate-300"
+                              ? "bg-white/20 text-white"
+                              : "bg-[#f4f7fb] text-[#526078]"
                           }`}
                         >
                           {feature.category}
@@ -213,12 +213,12 @@ const Section2 = () => {
                       </div>
                       <div className="space-y-2">
                         <h3
-                          className={`text-lg font-bold transition-colors ${isSelected ? "text-[#142238]" : "text-white group-hover:text-[#f2a65a]"}`}
+                          className={`text-lg font-bold transition-colors ${isSelected ? "text-white" : "text-[#172033] group-hover:text-[#e1873d]"}`}
                         >
                           {feature.title}
                         </h3>
                         <p
-                          className={`text-sm leading-6 ${isSelected ? "text-[#142238]/75" : "text-slate-400 group-hover:text-slate-300"}`}
+                          className={`text-sm leading-6 ${isSelected ? "text-white/80" : "text-[#526078]"}`}
                         >
                           {feature.description}
                         </p>
@@ -226,8 +226,8 @@ const Section2 = () => {
                       <span
                         className={`self-start rounded-full px-3 py-1.5 text-[11px] font-bold tracking-wider transition-all ${
                           isSelected
-                            ? "bg-[#142238]/10 text-[#142238]"
-                            : "bg-white/10 text-slate-300"
+                            ? "bg-white/20 text-white"
+                            : "bg-[#f4f7fb] text-[#526078]"
                         }`}
                       >
                         {feature.stat}
@@ -239,21 +239,21 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-[#f8f5ee] p-7 text-[#142238] shadow-2xl md:p-9">
+          <div className="rounded-2xl border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-xl md:p-9">
             <div className="flex items-start gap-4 mb-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f2a65a] text-[#142238] shadow-lg">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#e1873d] text-white shadow-lg">
                 {activeItem.icon}
               </div>
               <div className="space-y-3 flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className="rounded-full bg-[#142238]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#142238]">
+                  <span className="rounded-full bg-[#f2d98a]/40 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#a45b1e]">
                     {activeItem.category}
                   </span>
-                  <span className="rounded-full bg-[#f2a65a]/25 px-3 py-1 text-xs font-bold text-[#a45b1e]">
+                  <span className="rounded-full bg-[#f2d98a]/40 px-3 py-1 text-xs font-bold text-[#a45b1e]">
                     {activeItem.stat}
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold leading-tight text-[#142238]">
+                <h3 className="text-3xl font-bold leading-tight text-[#172033]">
                   {activeItem.title}
                 </h3>
               </div>
@@ -261,7 +261,7 @@ const Section2 = () => {
 
             <div className="mt-8 space-y-6">
               <div className="space-y-3 border-t border-[#142238]/15 pt-5">
-                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a45b1e]">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e1873d]">
                   Summary
                 </h4>
                 <p className="text-base font-medium leading-7 text-[#526078]">
@@ -270,7 +270,7 @@ const Section2 = () => {
               </div>
 
               <div className="space-y-3 border-t border-[#142238]/15 pt-5">
-                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a45b1e]">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e1873d]">
                   Why it matters
                 </h4>
                 <p className="text-base font-medium leading-7 text-[#526078]">
@@ -282,14 +282,14 @@ const Section2 = () => {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-base text-slate-700 font-medium">
                 Ready to integrate{" "}
-                <span className="font-bold text-[#a45b1e]">
+                <span className="font-bold text-[#e1873d]">
                   {activeItem.title}
                 </span>
                 ?
               </span>
               <a
                 href="#docs"
-                className="inline-flex items-center justify-center rounded-lg bg-[#142238] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#253a58] active:scale-95"
+                className="inline-flex items-center justify-center rounded-lg bg-[#172033] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#2b3b57] active:scale-95"
               >
                 Read Documentation →
               </a>
