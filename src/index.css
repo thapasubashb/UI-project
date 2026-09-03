@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+:root {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: #172033;
+    background: #f4f7fb;
+    font-synthesis: none;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+}
+
+button,
+a,
+input {
+    font: inherit;
+}
+
 #right::-webkit-scrollbar{
     display:none
 

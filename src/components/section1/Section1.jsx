@@ -4,10 +4,8 @@ import Page1content from "./Page1content";
 
 const Section1 = (props) => {
   return (
-    <div className="min-h-screen w-full relative bg-gradient-to-br from-indigo-50 via-sky-50 to-white">
-      {/* Decorative gradient auras */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[520px] h-[300px] bg-indigo-100/50 rounded-full blur-[90px] pointer-events-none" />
-      <div className="absolute top-1/4 -left-28 w-72 h-72 bg-sky-100/40 rounded-full blur-[90px] pointer-events-none" />
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#f4f7fb] text-[#172033]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,217,138,0.34),transparent_28%),radial-gradient(circle_at_10%_70%,rgba(170,220,255,0.32),transparent_32%)]" />
 
       <Navbar />
       <Page1content users={props.users} />

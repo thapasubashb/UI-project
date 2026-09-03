@@ -4,7 +4,7 @@ import RightContent from "./RightContent";
 
 const Page1content = (props) => {
   return (
-    <div className="min-h-[85vh] py-12 px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div className="relative z-10 grid min-h-[85vh] items-center gap-14 px-6 py-12 md:grid-cols-[0.82fr_1.18fr] md:px-12 lg:gap-20">
       <div className="order-1 md:order-1">
         <LeftContent />
       </div>
