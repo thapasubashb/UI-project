@@ -99,33 +99,29 @@ const Section2 = () => {
   const activeItem = features[activeFeature] || features[0];
 
   return (
-    <section className="min-h-screen w-full bg-slate-50 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden">
-      {/* Background Decorator Grid & Glows */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-200/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#142238] px-6 py-24 text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(30deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:5rem_5rem]" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-[#f2a65a]/15 blur-3xl" />
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full space-y-16">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200/80 rounded-full shadow-md hover:shadow-lg transition-shadow">
-            <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
-            Built For Growth
+      <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
+        <div className="max-w-3xl space-y-5">
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#f2a65a]">
+            <span className="h-2 w-2 rounded-full bg-[#f2a65a]" />
+            02 / Platform capabilities
           </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
-              Everything you need
-            </span>{" "}
-            to build faster
+          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
+            The infrastructure behind{" "}
+            <span className="text-[#f2a65a]">better decisions.</span>
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Empower your workflow with a modern tech stack engineered for scale,
-            reliability, and lightning-fast performance.
+          <p className="max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
+            Explore the systems that keep every customer interaction fast,
+            protected, and measurable.
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] items-start">
           <div className="space-y-6">
-            <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-4 shadow-2xl backdrop-blur-sm">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {categories.map((cat) => (
@@ -133,10 +129,10 @@ const Section2 = () => {
                       key={cat}
                       onClick={() => setSelectedCategory(cat)}
                       aria-pressed={selectedCategory === cat}
-                      className={`rounded-full px-5 py-2.5 text-[12px] font-bold transition-all duration-300 border transform hover:scale-105 ${
+                      className={`rounded-lg border px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-wider transition-all duration-300 ${
                         selectedCategory === cat
-                          ? "bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-sky-300/50 border-transparent"
-                          : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
+                          ? "border-[#f2a65a] bg-[#f2a65a] text-[#142238] shadow-lg shadow-[#f2a65a]/20"
+                          : "border-white/10 bg-white/5 text-slate-300 hover:border-white/30 hover:bg-white/10"
                       }`}
                     >
                       {cat}
@@ -150,11 +146,11 @@ const Section2 = () => {
                     placeholder="Search features..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full rounded-full border border-slate-300 bg-white px-12 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-sky-400 focus:border-transparent focus:outline-none shadow-sm transition-all"
+                    className="w-full rounded-lg border border-white/10 bg-white/10 px-12 py-3 text-sm text-white placeholder:text-slate-400 outline-none transition-all focus:border-[#f2a65a] focus:ring-1 focus:ring-[#f2a65a]"
                     aria-label="Search features"
                   />
                   <svg
-                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"
+                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -191,16 +187,16 @@ const Section2 = () => {
                       aria-pressed={isSelected}
                       className={`group flex flex-col gap-4 rounded-2xl border p-6 text-left transition-all duration-300 transform hover:scale-105 ${
                         isSelected
-                          ? "border-transparent ring-2 ring-sky-400 bg-gradient-to-br from-sky-50 to-indigo-50 shadow-xl shadow-sky-200/50 scale-105"
-                          : "border-slate-200 bg-white hover:shadow-lg hover:border-sky-200"
+                          ? "border-[#f2a65a] bg-[#f2a65a] text-[#142238] shadow-xl shadow-[#f2a65a]/20"
+                          : "border-white/10 bg-white/[0.07] text-white hover:border-white/30 hover:bg-white/10"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div
                           className={`flex h-14 w-14 items-center justify-center rounded-xl transition-all ${
                             isSelected
-                              ? "bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg"
-                              : "bg-sky-50 text-sky-600 group-hover:bg-sky-100"
+                              ? "bg-[#142238] text-[#f2a65a] shadow-lg"
+                              : "bg-white/10 text-[#f2a65a] group-hover:bg-white/20"
                           }`}
                         >
                           {feature.icon}
@@ -208,26 +204,30 @@ const Section2 = () => {
                         <span
                           className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider transition-all ${
                             isSelected
-                              ? "bg-sky-200 text-sky-800"
-                              : "bg-slate-100 text-slate-700"
+                              ? "bg-[#142238]/10 text-[#142238]"
+                              : "bg-white/10 text-slate-300"
                           }`}
                         >
                           {feature.category}
                         </span>
                       </div>
                       <div className="space-y-2">
-                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
+                        <h3
+                          className={`text-lg font-bold transition-colors ${isSelected ? "text-[#142238]" : "text-white group-hover:text-[#f2a65a]"}`}
+                        >
                           {feature.title}
                         </h3>
-                        <p className="text-sm leading-6 text-slate-600 group-hover:text-slate-700">
+                        <p
+                          className={`text-sm leading-6 ${isSelected ? "text-[#142238]/75" : "text-slate-400 group-hover:text-slate-300"}`}
+                        >
                           {feature.description}
                         </p>
                       </div>
                       <span
                         className={`self-start rounded-full px-3 py-1.5 text-[11px] font-bold tracking-wider transition-all ${
                           isSelected
-                            ? "bg-sky-300 text-sky-900"
-                            : "bg-slate-100 text-slate-700"
+                            ? "bg-[#142238]/10 text-[#142238]"
+                            : "bg-white/10 text-slate-300"
                         }`}
                       >
                         {feature.stat}
@@ -239,41 +239,41 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="rounded-2xl border border-white/10 bg-[#f8f5ee] p-7 text-[#142238] shadow-2xl md:p-9">
             <div className="flex items-start gap-4 mb-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-lg transform transition-transform group-hover:scale-110">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f2a65a] text-[#142238] shadow-lg">
                 {activeItem.icon}
               </div>
               <div className="space-y-3 flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
-                  <span className="rounded-full bg-sky-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-sky-700">
+                  <span className="rounded-full bg-[#142238]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#142238]">
                     {activeItem.category}
                   </span>
-                  <span className="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+                  <span className="rounded-full bg-[#f2a65a]/25 px-3 py-1 text-xs font-bold text-[#a45b1e]">
                     {activeItem.stat}
                   </span>
                 </div>
-                <h3 className="text-4xl font-extrabold text-slate-900 leading-tight">
+                <h3 className="text-3xl font-bold leading-tight text-[#142238]">
                   {activeItem.title}
                 </h3>
               </div>
             </div>
 
             <div className="mt-8 space-y-6">
-              <div className="space-y-3 rounded-2xl border border-sky-200/50 bg-gradient-to-br from-sky-50 to-indigo-50 p-6 hover:border-sky-300 transition-colors">
-                <h4 className="text-sm font-bold uppercase tracking-wider text-sky-700">
-                  ✨ Summary
+              <div className="space-y-3 border-t border-[#142238]/15 pt-5">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a45b1e]">
+                  Summary
                 </h4>
-                <p className="text-base leading-7 text-slate-700 font-medium">
+                <p className="text-base font-medium leading-7 text-[#526078]">
                   {activeItem.description}
                 </p>
               </div>
 
-              <div className="space-y-3 rounded-2xl border border-indigo-200/50 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 hover:border-indigo-300 transition-colors">
-                <h4 className="text-sm font-bold uppercase tracking-wider text-indigo-700">
-                  💡 Why it matters
+              <div className="space-y-3 border-t border-[#142238]/15 pt-5">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a45b1e]">
+                  Why it matters
                 </h4>
-                <p className="text-base leading-7 text-slate-700 font-medium">
+                <p className="text-base font-medium leading-7 text-[#526078]">
                   {activeItem.details}
                 </p>
               </div>
@@ -282,14 +282,14 @@ const Section2 = () => {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-base text-slate-700 font-medium">
                 Ready to integrate{" "}
-                <span className="font-bold text-sky-600">
+                <span className="font-bold text-[#a45b1e]">
                   {activeItem.title}
                 </span>
                 ?
               </span>
               <a
                 href="#docs"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 px-8 py-3 text-base font-bold text-white transition-all hover:shadow-lg hover:shadow-sky-300/50 active:scale-95"
+                className="inline-flex items-center justify-center rounded-lg bg-[#142238] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#253a58] active:scale-95"
               >
                 Read Documentation →
               </a>
