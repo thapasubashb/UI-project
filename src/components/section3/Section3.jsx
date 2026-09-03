@@ -35,36 +35,31 @@ const Section3 = () => {
   ];
 
   return (
-    <section className="min-h-screen w-full bg-gradient-to-br from-white via-slate-50 to-slate-100 text-slate-900 flex items-center justify-center py-24 px-6 relative overflow-hidden font-sans">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 pointer-events-none" />
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-200/60 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-1/3 -left-40 w-80 h-80 bg-blue-200/50 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-cyan-200/50 rounded-full blur-[100px] pointer-events-none" />
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f5efe4] px-6 py-24 text-[#20352b]">
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(32,53,43,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(32,53,43,0.08)_1px,transparent_1px)] [background-size:4rem_4rem]" />
+      <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#9bbca1]/40 blur-3xl" />
 
-      <div className="max-w-6xl mx-auto w-full z-10 space-y-12">
+      <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
         {/* Top Header Section */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-wider text-sky-700 uppercase bg-gradient-to-r from-sky-50 to-cyan-50 border border-sky-200 rounded-full shadow-lg hover:shadow-xl backdrop-blur-md transition-shadow">
-            <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse shadow-[0_0_8px_#38bdf8]" />
-            Minimal by Design
+        <div className="mx-auto max-w-3xl space-y-5 text-center">
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#b8653b]">
+            <span className="h-2 w-2 rounded-full bg-[#b8653b]" />
+            03 / Built to last
           </span>
 
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
-              Simple &amp; Clean
-            </span>
-            <br />
-            <span className="text-slate-900">Design System</span>
+          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-[#20352b] sm:text-6xl">
+            Designed for clarity.
+            <br /> <span className="text-[#b8653b]">Ready for momentum.</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            A minimalist layout built for modern landing pages, portfolios, and
-            product showcases with perfect spacing and typography.
+          <p className="mx-auto max-w-2xl text-base leading-7 text-[#5e6b61] md:text-lg">
+            A thoughtful foundation for teams that want every customer
+            touchpoint to feel considered.
           </p>
         </div>
 
         {/* 2-Column Functional Interactive Layout */}
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr]">
           {/* Column 1: Feature Selector Tabs */}
           <div className="space-y-4 flex flex-col justify-center">
             {features.map((feature, idx) => (
@@ -72,57 +67,55 @@ const Section3 = () => {
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 aria-pressed={activeTab === idx}
-                className={`group w-full text-left transition-all duration-300 p-6 rounded-2xl border transform hover:scale-105 ${
+                className={`group w-full rounded-2xl border p-6 text-left transition-all duration-300 ${
                   activeTab === idx
-                    ? "bg-gradient-to-br from-sky-50 to-indigo-50 ring-2 ring-sky-400 shadow-xl shadow-sky-200/50 scale-105 border-transparent"
-                    : "bg-white border-slate-200 hover:shadow-lg hover:border-sky-200"
+                    ? "border-[#20352b] bg-[#20352b] text-white shadow-xl shadow-[#20352b]/20"
+                    : "border-[#20352b]/10 bg-white/70 hover:border-[#b8653b]/60 hover:bg-white"
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span
                     className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-all ${
                       activeTab === idx
-                        ? "bg-sky-200 text-sky-800 border-sky-300"
-                        : "bg-sky-50 text-sky-700 border-sky-100 group-hover:bg-sky-100"
+                        ? "border-[#9bbca1] bg-[#9bbca1] text-[#20352b]"
+                        : "border-[#20352b]/10 bg-[#9bbca1]/25 text-[#38614a] group-hover:bg-[#9bbca1]/45"
                     }`}
                   >
                     {feature.tag}
                   </span>
                   <span
                     className={`text-sm font-bold transition-colors ${
-                      activeTab === idx ? "text-sky-600" : "text-slate-400"
+                      activeTab === idx ? "text-[#f4c27b]" : "text-[#b8653b]"
                     }`}
                   >
                     0{idx + 1}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
+                <h3
+                  className={`text-xl font-bold transition-colors ${activeTab === idx ? "text-white" : "text-[#20352b] group-hover:text-[#b8653b]"}`}
+                >
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-sm text-slate-600 hidden sm:block group-hover:text-slate-700 transition-colors">
+                <p
+                  className={`mt-3 hidden text-sm transition-colors sm:block ${activeTab === idx ? "text-slate-300" : "text-[#5e6b61]"}`}
+                >
                   {feature.description}
                 </p>
               </button>
             ))}
 
             {/* Actions Bar moved below selection */}
-            <div className="flex flex-wrap gap-4 pt-6">
-              <button className="flex-1 px-6 py-3 bg-gradient-to-r from-sky-500 via-indigo-500 to-blue-600 hover:from-sky-600 hover:via-indigo-600 hover:to-blue-700 text-white font-bold rounded-xl shadow-lg shadow-sky-300/50 hover:shadow-xl hover:shadow-sky-400/60 transition-all duration-300 active:scale-95 text-center transform hover:scale-105">
+            <div className="pt-4">
+              <button className="w-full rounded-xl bg-[#b8653b] px-6 py-3 text-center font-bold text-white shadow-lg shadow-[#b8653b]/20 transition-all duration-300 hover:bg-[#9d4f2e] active:scale-95">
                 Get Started
               </button>
-              <a
-                href="#learn-more"
-                className="flex-1 px-6 py-3 border-2 border-sky-300 bg-white text-sky-700 font-bold rounded-xl hover:bg-sky-50 hover:border-sky-400 transition-all duration-300 text-center transform hover:scale-105"
-              >
-                Learn More
-              </a>
             </div>
           </div>
 
           {/* Column 2: Active Feature Display Panel */}
-          <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-center relative min-h-[400px]">
+          <div className="relative flex min-h-[400px] flex-col justify-center rounded-2xl border border-[#20352b]/10 bg-white/80 p-8 shadow-xl shadow-[#20352b]/10 md:p-10">
             <div className="flex items-center gap-6 mb-8">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 via-indigo-500 to-blue-600 flex items-center justify-center text-white shadow-lg transform transition-transform hover:scale-110">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#9bbca1] text-[#20352b] shadow-lg">
                 <svg
                   className="w-8 h-8"
                   fill="none"
@@ -133,24 +126,24 @@ const Section3 = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-100 px-3 py-1 rounded-full inline-block">
-                  ✨ Selected Focus
+                <span className="inline-block rounded-full bg-[#9bbca1]/35 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#38614a]">
+                  Selected focus
                 </span>
-                <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 leading-tight">
+                <h3 className="mt-2 text-3xl font-bold leading-tight text-[#20352b] sm:text-4xl">
                   {features[activeTab].title}
                 </h3>
               </div>
             </div>
 
-            <p className="text-slate-700 text-lg leading-8 font-medium mb-8">
+            <p className="mb-8 text-lg font-medium leading-8 text-[#5e6b61]">
               {features[activeTab].description}
             </p>
 
             <div className="mt-auto flex flex-col sm:flex-row gap-4">
-              <button className="flex-1 px-6 py-3.5 bg-gradient-to-r from-sky-500 to-indigo-600 text-white rounded-lg font-bold shadow-lg shadow-sky-300/50 hover:shadow-xl hover:shadow-sky-400/60 transition-all active:scale-95 transform hover:scale-105">
-                Explore Docs →
+              <button className="flex-1 rounded-lg bg-[#20352b] px-6 py-3.5 font-bold text-white shadow-lg shadow-[#20352b]/20 transition-all hover:bg-[#31513f] active:scale-95">
+                Explore docs
               </button>
-              <button className="flex-1 px-6 py-3.5 border-2 border-sky-300 rounded-lg text-sky-700 font-bold bg-sky-50 hover:bg-sky-100 hover:border-sky-400 transition-all transform hover:scale-105">
+              <button className="flex-1 rounded-lg border-2 border-[#20352b]/20 bg-transparent px-6 py-3.5 font-bold text-[#20352b] transition-all hover:border-[#b8653b] hover:text-[#b8653b]">
                 Start Trial
               </button>
             </div>
