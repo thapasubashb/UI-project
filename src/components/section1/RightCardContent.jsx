@@ -2,23 +2,30 @@ import React from "react";
 
 const RightCardContent = (props) => {
   return (
-    <div className="absolute top-0 left-0 h-full w-full p-6 md:p-8 flex flex-col justify-between bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white transition-all duration-300 group-hover:from-black/80">
-      <div className="bg-white rounded-full text-lg font-bold h-12 w-12 flex justify-center items-center text-indigo-600 shadow-lg transform transition-transform group-hover:scale-110">
-        {props.id + 1}
+    <div className="absolute inset-0 flex flex-col justify-between p-5 text-white md:p-6">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-lg font-black backdrop-blur-sm ring-1 ring-white/20 transition-transform duration-300 group-hover:scale-110">
+          {props.id + 1}
+        </div>
+        <span className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
+          profile
+        </span>
       </div>
-      <div className="transform transition-transform group-hover:translate-y-0">
-        <p className="leading-relaxed text-base md:text-lg mb-6 font-medium line-clamp-3">
-          Experience personalized banking tailored to your financial goals and
-          lifestyle.
+
+      <div className="translate-y-0 transition-transform duration-300 group-hover:-translate-y-1">
+        <p className="mb-5 max-w-[18rem] text-sm leading-6 text-white/90 md:text-base">
+          Experience tailored banking built around financial goals, lifestyle,
+          and everyday needs.
         </p>
+
         <div className="flex items-center justify-between gap-3">
           <button
             style={{ backgroundColor: props.color }}
-            className="text-white font-semibold px-6 md:px-8 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 md:px-5"
           >
             {props.tag}
           </button>
-          <button className="text-white font-medium px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110">
+          <button className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20">
             <i className="ri-arrow-right-line text-lg"></i>
           </button>
         </div>

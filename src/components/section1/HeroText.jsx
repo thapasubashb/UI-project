@@ -3,19 +3,33 @@ import React from "react";
 const HeroText = () => {
   return (
     <div className="max-w-xl p-1 md:p-0">
-      <p className="mb-7 text-xs font-bold uppercase tracking-[0.24em] text-[#e1873d]">
-        01 / Know who to serve
-      </p>
-      <h3 className="mb-8 text-5xl font-bold leading-[0.98] tracking-[-0.04em] text-[#172033] md:text-7xl">
-        <span className="text-[#e1873d]">Prospective</span>
-        <br /> customer
-        <br /> segmentation
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#e1873d]/20 bg-[#fffaf2] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#e1873d] shadow-sm">
+        <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
+        01 / Target audience
+      </div>
+
+      <h3 className="mb-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] text-[#172033] md:text-7xl">
+        <span className="inline-block text-[#e1873d]">Prospective</span>
+        <br />
+        customer
+        <br />
+        segmentation
       </h3>
-      <p className="mt-6 w-full text-base font-medium leading-7 text-[#526078] md:w-[90%] md:text-lg">
-        Understand and target your prospective customers with precision. Segment
-        by behavior, demographics, and financial needs to deliver personalized
-        banking experiences.
+
+      <p className="w-full max-w-lg text-base font-medium leading-7 text-[#526078] md:text-lg">
+        Understand and target the right people with precision. Segment by
+        behavior, demographics, and financial needs to deliver more relevant,
+        trust-driven experiences.
       </p>
+
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <button className="rounded-full bg-[#172033] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#172033]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2b3b57]">
+          Explore segments
+        </button>
+        <button className="rounded-full border border-[#172033]/15 bg-white/80 px-6 py-3 text-sm font-bold text-[#172033] transition-all duration-300 hover:border-[#e1873d]/50 hover:text-[#e1873d]">
+          View insights
+        </button>
+      </div>
     </div>
   );
 };
