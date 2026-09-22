@@ -15,9 +15,14 @@ const Section2 = () => {
       stat: "< 50ms latency",
       details:
         "Edge-cached content delivery coupled with serverless execution keeps TTFB minimal globally.",
+      bullets: [
+        "Global edge delivery",
+        "Real-time request routing",
+        "Elastic scalability",
+      ],
       icon: (
         <svg
-          className="w-6 h-6 text-sky-600 group-hover:text-blue-600 transition-colors"
+          className="w-6 h-6 text-sky-600 transition-colors group-hover:text-blue-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -40,9 +45,14 @@ const Section2 = () => {
       stat: "AES-256 & SOC2",
       details:
         "Automated compliance checks, granular RBAC permissions, and real-time threat prevention.",
+      bullets: [
+        "Zero-trust access",
+        "Continuous compliance checks",
+        "Granular permission controls",
+      ],
       icon: (
         <svg
-          className="w-6 h-6 text-sky-600 group-hover:text-blue-600 transition-colors"
+          className="w-6 h-6 text-sky-600 transition-colors group-hover:text-blue-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -65,9 +75,14 @@ const Section2 = () => {
       stat: "Live telemetry",
       details:
         "Stream events directly into your warehouse with sub-second event processing pipelines.",
+      bullets: [
+        "Live dashboard views",
+        "Predictive trend alerts",
+        "Warehouse-ready exports",
+      ],
       icon: (
         <svg
-          className="w-6 h-6 text-sky-600 group-hover:text-blue-600 transition-colors"
+          className="w-6 h-6 text-sky-600 transition-colors group-hover:text-blue-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -102,6 +117,7 @@ const Section2 = () => {
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-6 py-24 text-[#172033]">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(23,32,51,0.04)_1px,transparent_1px),linear-gradient(30deg,rgba(23,32,51,0.03)_1px,transparent_1px)] bg-[size:5rem_5rem]" />
       <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-[#f2d98a]/35 blur-3xl" />
+      <div className="pointer-events-none absolute left-10 top-12 h-36 w-36 rounded-full bg-[#aadcff]/30 blur-3xl" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
         <div className="max-w-3xl space-y-5">
@@ -117,11 +133,20 @@ const Section2 = () => {
             Explore the systems that keep every customer interaction fast,
             protected, and measurable.
           </p>
+
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <span className="rounded-full border border-[#172033]/10 bg-white/80 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#172033]">
+              99.98% uptime
+            </span>
+            <span className="rounded-full border border-[#e1873d]/20 bg-[#fffaf2] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#a45b1e]">
+              24/7 orchestration
+            </span>
+          </div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] items-start">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.3fr_0.9fr]">
           <div className="space-y-6">
-            <div className="rounded-2xl border border-[#172033]/10 bg-white/75 p-4 shadow-xl backdrop-blur-sm">
+            <div className="rounded-[1.75rem] border border-[#172033]/10 bg-white/80 p-4 shadow-[0_18px_50px_-25px_rgba(23,32,51,0.35)] backdrop-blur-sm">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {categories.map((cat) => (
@@ -129,7 +154,7 @@ const Section2 = () => {
                       key={cat}
                       onClick={() => setSelectedCategory(cat)}
                       aria-pressed={selectedCategory === cat}
-                      className={`rounded-lg border px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-wider transition-all duration-300 ${
+                      className={`rounded-xl border px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-[0.18em] transition-all duration-300 ${
                         selectedCategory === cat
                           ? "border-[#e1873d] bg-[#e1873d] text-white shadow-lg shadow-[#e1873d]/20"
                           : "border-[#172033]/10 bg-[#f4f7fb] text-[#526078] hover:border-[#e1873d]/50 hover:bg-white"
@@ -146,7 +171,7 @@ const Section2 = () => {
                     placeholder="Search features..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full rounded-lg border border-[#172033]/10 bg-[#f4f7fb] px-12 py-3 text-sm text-[#172033] placeholder:text-[#7d899a] outline-none transition-all focus:border-[#e1873d] focus:ring-1 focus:ring-[#e1873d]"
+                    className="w-full rounded-xl border border-[#172033]/10 bg-[#f4f7fb] px-12 py-3 text-sm text-[#172033] placeholder:text-[#7d899a] outline-none transition-all focus:border-[#e1873d] focus:ring-2 focus:ring-[#e1873d]/20"
                     aria-label="Search features"
                   />
                   <svg
@@ -185,10 +210,10 @@ const Section2 = () => {
                       key={feature.id}
                       onClick={() => setActiveFeature(indexInOriginal)}
                       aria-pressed={isSelected}
-                      className={`group flex flex-col gap-4 rounded-2xl border p-6 text-left transition-all duration-300 transform hover:scale-105 ${
+                      className={`group flex transform flex-col gap-4 rounded-[1.5rem] border p-5 text-left transition-all duration-300 hover:-translate-y-1 ${
                         isSelected
-                          ? "border-[#e1873d] bg-[#e1873d] text-white shadow-xl shadow-[#e1873d]/20"
-                          : "border-[#172033]/10 bg-white text-[#172033] hover:border-[#e1873d]/50 hover:bg-white"
+                          ? "border-[#e1873d] bg-[#e1873d] text-white shadow-[0_22px_45px_-20px_rgba(225,135,61,0.6)]"
+                          : "border-[#172033]/10 bg-white text-[#172033] hover:border-[#e1873d]/50 hover:bg-[#fffdfa]"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-4">
@@ -239,17 +264,17 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-xl md:p-9">
-            <div className="flex items-start gap-4 mb-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#e1873d] text-white shadow-lg">
+          <div className="rounded-[2rem] border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9">
+            <div className="mb-8 flex items-start gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-[#e1873d] text-white shadow-[0_18px_30px_-14px_rgba(225,135,61,0.8)]">
                 {activeItem.icon}
               </div>
-              <div className="space-y-3 flex-1">
-                <div className="flex items-center gap-3 flex-wrap">
-                  <span className="rounded-full bg-[#f2d98a]/40 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#a45b1e]">
+              <div className="flex-1 space-y-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="rounded-full bg-[#f2d98a]/40 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#a45b1e]">
                     {activeItem.category}
                   </span>
-                  <span className="rounded-full bg-[#f2d98a]/40 px-3 py-1 text-xs font-bold text-[#a45b1e]">
+                  <span className="rounded-full bg-[#f2d98a]/35 px-3 py-1 text-xs font-bold text-[#a45b1e]">
                     {activeItem.stat}
                   </span>
                 </div>
@@ -259,7 +284,7 @@ const Section2 = () => {
               </div>
             </div>
 
-            <div className="mt-8 space-y-6">
+            <div className="space-y-6">
               <div className="space-y-3 border-t border-[#142238]/15 pt-5">
                 <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e1873d]">
                   Summary
@@ -277,22 +302,44 @@ const Section2 = () => {
                   {activeItem.details}
                 </p>
               </div>
+
+              <div className="space-y-3 border-t border-[#142238]/15 pt-5">
+                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e1873d]">
+                  What this unlocks
+                </h4>
+                <ul className="space-y-2 text-sm font-medium text-[#526078]">
+                  {activeItem.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-base text-slate-700 font-medium">
+              <span className="text-base font-medium text-slate-700">
                 Ready to integrate{" "}
                 <span className="font-bold text-[#e1873d]">
                   {activeItem.title}
                 </span>
                 ?
               </span>
-              <a
-                href="#docs"
-                className="inline-flex items-center justify-center rounded-lg bg-[#172033] px-6 py-3 text-sm font-bold text-white transition-all hover:bg-[#2b3b57] active:scale-95"
-              >
-                Read Documentation →
-              </a>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#docs"
+                  className="inline-flex items-center justify-center rounded-xl border border-[#172033]/10 bg-[#f4f7fb] px-5 py-3 text-sm font-bold text-[#172033] transition-all hover:border-[#172033]/25 hover:bg-white"
+                >
+                  View details
+                </a>
+                <a
+                  href="#docs"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#172033] px-5 py-3 text-sm font-bold text-white transition-all hover:bg-[#2b3b57] active:scale-95"
+                >
+                  Read Documentation →
+                </a>
+              </div>
             </div>
           </div>
         </div>
