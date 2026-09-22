@@ -8,6 +8,8 @@ const Section3 = () => {
       title: "Refined Visual Hierarchy",
       description:
         "Balanced spacing and clear typography for a polished presentation.",
+      detail:
+        "A structured layout helps users scan the value quickly, understand the product story, and feel confident in the experience before taking action.",
       icon: (
         <path
           strokeLinecap="round"
@@ -22,6 +24,8 @@ const Section3 = () => {
       title: "Fast and Lightweight",
       description:
         "A clean structure that remains elegant and responsive on every screen.",
+      detail:
+        "The foundation stays lightweight without sacrificing clarity, so the product feels modern, fast, and dependable across each customer touchpoint.",
       icon: (
         <path
           strokeLinecap="round"
@@ -38,9 +42,9 @@ const Section3 = () => {
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-6 py-24 text-[#172033]">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(23,32,51,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,32,51,0.08)_1px,transparent_1px)] [background-size:4rem_4rem]" />
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#aadcff]/45 blur-3xl" />
+      <div className="pointer-events-none absolute -right-10 top-10 h-52 w-52 rounded-full bg-[#f2d98a]/35 blur-3xl" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
-        {/* Top Header Section */}
         <div className="mx-auto max-w-3xl space-y-5 text-center">
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#e1873d]">
             <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
@@ -58,24 +62,22 @@ const Section3 = () => {
           </p>
         </div>
 
-        {/* 2-Column Functional Interactive Layout */}
         <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr]">
-          {/* Column 1: Feature Selector Tabs */}
-          <div className="space-y-4 flex flex-col justify-center">
+          <div className="flex flex-col justify-center space-y-4">
             {features.map((feature, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 aria-pressed={activeTab === idx}
-                className={`group w-full rounded-2xl border p-6 text-left transition-all duration-300 ${
+                className={`group w-full rounded-[1.5rem] border p-6 text-left transition-all duration-300 hover:-translate-y-0.5 ${
                   activeTab === idx
-                    ? "border-[#172033] bg-[#172033] text-white shadow-xl shadow-[#172033]/20"
-                    : "border-[#172033]/10 bg-white/70 hover:border-[#e1873d]/60 hover:bg-white"
+                    ? "border-[#172033] bg-[#172033] text-white shadow-[0_26px_60px_-25px_rgba(23,32,51,0.55)]"
+                    : "border-[#172033]/10 bg-white/75 hover:border-[#e1873d]/60 hover:bg-white"
                 }`}
               >
-                <div className="flex items-center justify-between mb-3">
+                <div className="mb-3 flex items-center justify-between">
                   <span
-                    className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-all ${
+                    className={`rounded-full border px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] transition-all ${
                       activeTab === idx
                         ? "border-[#f2d98a] bg-[#f2d98a] text-[#172033]"
                         : "border-[#172033]/10 bg-[#aadcff]/35 text-[#526078] group-hover:bg-[#aadcff]/55"
@@ -97,27 +99,25 @@ const Section3 = () => {
                   {feature.title}
                 </h3>
                 <p
-                  className={`mt-3 hidden text-sm transition-colors sm:block ${activeTab === idx ? "text-slate-300" : "text-[#526078]"}`}
+                  className={`mt-3 hidden text-sm leading-6 transition-colors sm:block ${activeTab === idx ? "text-slate-300" : "text-[#526078]"}`}
                 >
                   {feature.description}
                 </p>
               </button>
             ))}
 
-            {/* Actions Bar moved below selection */}
-            <div className="pt-4">
+            <div className="pt-2">
               <button className="w-full rounded-xl bg-[#e1873d] px-6 py-3 text-center font-bold text-white shadow-lg shadow-[#e1873d]/20 transition-all duration-300 hover:bg-[#c96f2e] active:scale-95">
                 Get Started
               </button>
             </div>
           </div>
 
-          {/* Column 2: Active Feature Display Panel */}
-          <div className="relative flex min-h-[400px] flex-col justify-center rounded-2xl border border-[#172033]/10 bg-white/80 p-8 shadow-xl shadow-[#172033]/10 md:p-10">
-            <div className="flex items-center gap-6 mb-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#aadcff] text-[#172033] shadow-lg">
+          <div className="relative flex min-h-[400px] flex-col justify-center rounded-[2rem] border border-[#172033]/10 bg-white/80 p-8 shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-10">
+            <div className="mb-8 flex items-center gap-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-[#aadcff] text-[#172033] shadow-[0_18px_28px_-16px_rgba(84,160,255,0.8)]">
                 <svg
-                  className="w-8 h-8"
+                  className="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -126,7 +126,7 @@ const Section3 = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <span className="inline-block rounded-full bg-[#aadcff]/45 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#526078]">
+                <span className="inline-block rounded-full bg-[#aadcff]/45 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#526078]">
                   Selected focus
                 </span>
                 <h3 className="mt-2 text-3xl font-bold leading-tight text-[#172033] sm:text-4xl">
@@ -135,15 +135,21 @@ const Section3 = () => {
               </div>
             </div>
 
-            <p className="mb-8 text-lg font-medium leading-8 text-[#526078]">
+            <p className="mb-6 text-lg font-medium leading-8 text-[#526078]">
               {features[activeTab].description}
             </p>
 
-            <div className="mt-auto flex flex-col sm:flex-row gap-4">
-              <button className="flex-1 rounded-lg bg-[#172033] px-6 py-3.5 font-bold text-white shadow-lg shadow-[#172033]/20 transition-all hover:bg-[#2b3b57] active:scale-95">
+            <div className="rounded-2xl border border-[#172033]/10 bg-[#f7fafd] p-4">
+              <p className="text-base leading-7 text-[#526078]">
+                {features[activeTab].detail}
+              </p>
+            </div>
+
+            <div className="mt-auto flex flex-col gap-4 pt-8 sm:flex-row">
+              <button className="flex-1 rounded-xl bg-[#172033] px-6 py-3.5 font-bold text-white shadow-lg shadow-[#172033]/20 transition-all hover:bg-[#2b3b57] active:scale-95">
                 Explore docs
               </button>
-              <button className="flex-1 rounded-lg border-2 border-[#172033]/20 bg-transparent px-6 py-3.5 font-bold text-[#172033] transition-all hover:border-[#e1873d] hover:text-[#e1873d]">
+              <button className="flex-1 rounded-xl border-2 border-[#172033]/20 bg-transparent px-6 py-3.5 font-bold text-[#172033] transition-all hover:border-[#e1873d] hover:text-[#e1873d]">
                 Start Trial
               </button>
             </div>
