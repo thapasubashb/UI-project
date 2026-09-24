@@ -7,7 +7,9 @@ const Section1 = (props) => {
     <div className="relative min-h-screen w-full overflow-hidden bg-[#f4f7fb] text-[#172033]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,217,138,0.34),transparent_28%),radial-gradient(circle_at_10%_70%,rgba(170,220,255,0.32),transparent_32%)]" />
 
-      <Navbar />
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 xl:px-10">
+        <Navbar />
+      </div>
       <Page1content users={props.users} />
     </div>
   );
