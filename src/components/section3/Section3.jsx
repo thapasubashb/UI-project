@@ -39,12 +39,12 @@ const Section3 = () => {
   ];
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-6 py-24 text-[#172033]">
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-5 py-24 text-[#172033] sm:px-6">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(23,32,51,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,32,51,0.08)_1px,transparent_1px)] [background-size:4rem_4rem]" />
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#aadcff]/45 blur-3xl" />
       <div className="pointer-events-none absolute -right-10 top-10 h-52 w-52 rounded-full bg-[#f2d98a]/35 blur-3xl" />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl space-y-12">
+      <div className="relative z-10 mx-auto w-full max-w-7xl space-y-12">
         <div className="mx-auto max-w-3xl space-y-5 text-center">
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#e1873d]">
             <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
@@ -62,7 +62,7 @@ const Section3 = () => {
           </p>
         </div>
 
-        <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr]">
+        <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr] md:items-center">
           <div className="flex flex-col justify-center space-y-4">
             {features.map((feature, idx) => (
               <button

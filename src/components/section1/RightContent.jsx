@@ -4,7 +4,7 @@ import RightCard from "./RightCard";
 const RightContent = (props) => {
   return (
     <div id="right" className="w-full">
-      <div className="grid w-full items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid w-full items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5">
         {Array.isArray(props.users) &&
           props.users.map(function (elem, idx) {
             return (
