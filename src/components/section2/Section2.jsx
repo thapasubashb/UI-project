@@ -191,7 +191,7 @@ const Section2 = () => {
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {filteredFeatures.length === 0 ? (
                 <div className="col-span-full rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-12 text-center">
                   <p className="text-slate-500 font-medium">
@@ -266,7 +266,7 @@ const Section2 = () => {
 
           <div className="rounded-[2rem] border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9 lg:p-10">
             <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-[#e1873d] text-white shadow-[0_18px_30px_-14px_rgba(225,135,61,0.8)]">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[1.25rem] bg-[#e1873d] text-white shadow-[0_18px_30px_-14px_rgba(225,135,61,0.8)]">
                 {activeItem.icon}
               </div>
               <div className="flex-1 space-y-3">
@@ -284,7 +284,7 @@ const Section2 = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div className="space-y-3 border-t border-[#142238]/15 pt-5">
                 <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#e1873d]">
                   Summary
