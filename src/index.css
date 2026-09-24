@@ -27,6 +27,11 @@ body {
     background: #f4f7fb;
 }
 
+::selection {
+    background: rgba(225, 135, 61, 0.22);
+    color: #172033;
+}
+
 button,
 a,
 input {

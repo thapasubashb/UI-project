@@ -51,7 +51,7 @@ const Section3 = () => {
             03 / Built to last
           </span>
 
-          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-[#172033] sm:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-[1.02] tracking-[-0.05em] text-[#172033] sm:text-5xl lg:text-6xl">
             Designed for clarity.
             <br /> <span className="text-[#e1873d]">Ready for momentum.</span>
           </h2>
@@ -139,7 +139,7 @@ const Section3 = () => {
               {features[activeTab].description}
             </p>
 
-            <div className="rounded-2xl border border-[#172033]/10 bg-[#f7fafd] p-4">
+            <div className="rounded-2xl border border-[#172033]/10 bg-[linear-gradient(135deg,#f7fafd_0%,#eef4ff_100%)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
               <p className="text-base leading-7 text-[#526078]">
                 {features[activeTab].detail}
               </p>

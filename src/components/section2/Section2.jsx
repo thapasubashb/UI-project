@@ -144,7 +144,7 @@ const Section2 = () => {
           </div>
         </div>
 
-        <div className="grid items-start gap-8 lg:grid-cols-[1.3fr_0.9fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.25fr_0.95fr] lg:items-stretch">
           <div className="space-y-6">
             <div className="rounded-[1.75rem] border border-[#172033]/10 bg-white/80 p-4 shadow-[0_18px_50px_-25px_rgba(23,32,51,0.35)] backdrop-blur-sm">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -264,7 +264,7 @@ const Section2 = () => {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9">
+          <div className="rounded-[2rem] border border-[#172033]/10 bg-white p-7 text-[#172033] shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9 lg:p-10">
             <div className="mb-8 flex items-start gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-[#e1873d] text-white shadow-[0_18px_30px_-14px_rgba(225,135,61,0.8)]">
                 {activeItem.icon}
