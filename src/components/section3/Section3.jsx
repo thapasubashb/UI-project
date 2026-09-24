@@ -62,7 +62,7 @@ const Section3 = () => {
           </p>
         </div>
 
-        <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr] md:items-center">
+        <div className="grid items-stretch gap-8 md:grid-cols-[0.82fr_1.18fr] md:items-center lg:gap-10">
           <div className="flex flex-col justify-center space-y-4">
             {features.map((feature, idx) => (
               <button
@@ -113,9 +113,9 @@ const Section3 = () => {
             </div>
           </div>
 
-          <div className="relative flex min-h-[400px] flex-col justify-center rounded-[2rem] border border-[#172033]/10 bg-white/80 p-8 shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-10">
-            <div className="mb-8 flex items-center gap-6">
-              <div className="flex h-16 w-16 items-center justify-center rounded-[1.25rem] bg-[#aadcff] text-[#172033] shadow-[0_18px_28px_-16px_rgba(84,160,255,0.8)]">
+          <div className="relative flex min-h-[400px] flex-col justify-center rounded-[2rem] border border-[#172033]/10 bg-white/80 p-7 shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9 lg:p-10">
+            <div className="mb-8 flex items-center gap-5 sm:gap-6">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[1.25rem] bg-[#aadcff] text-[#172033] shadow-[0_18px_28px_-16px_rgba(84,160,255,0.8)]">
                 <svg
                   className="h-8 w-8"
                   fill="none"
