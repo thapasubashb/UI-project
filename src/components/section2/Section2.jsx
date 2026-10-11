@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import "./Section2.css";
 
 const Section2 = () => {
   const [activeFeature, setActiveFeature] = useState(0);
