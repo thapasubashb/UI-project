@@ -3,9 +3,9 @@
 :root {
     font-family: "Trebuchet MS", "Segoe UI", sans-serif;
     line-height: 1.5;
-    color: #172033;
-    background: #f4f7fb;
-    color-scheme: light;
+    color: #f5f6f8;
+    background: #090b10;
+    color-scheme: dark;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -67,7 +67,17 @@ img {
     inset: 0;
     pointer-events: none;
     background:
-        radial-gradient(ellipse at 78% 14%, rgba(219, 128, 84, 0.1), transparent 36%),
-        radial-gradient(ellipse at 16% 70%, rgba(79, 125, 175, 0.1), transparent 39%),
+        radial-gradient(ellipse at 80% 16%, rgba(219, 128, 84, 0.09), transparent 38%),
+        radial-gradient(ellipse at 13% 76%, rgba(79, 125, 175, 0.085), transparent 42%),
         linear-gradient(128deg, #090b10 4%, #11141b 52%, #090b11 100%);
+}
+
+.site-flow__ambient::after {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.18) 0.6px, transparent 0.6px);
+    background-size: 34px 34px;
+    content: "";
+    mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+    opacity: 0.12;
 }

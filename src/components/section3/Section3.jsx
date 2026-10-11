@@ -40,11 +40,7 @@ const Section3 = () => {
   ];
 
   return (
-    <section className="section-three relative w-full overflow-hidden px-5 py-20 sm:px-6 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(23,32,51,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,32,51,0.08)_1px,transparent_1px)] [background-size:4rem_4rem]" />
-      <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#aadcff]/45 blur-3xl" />
-      <div className="pointer-events-none absolute -right-10 top-10 h-52 w-52 rounded-full bg-[#f2d98a]/35 blur-3xl" />
-
+    <section className="section-three relative w-full px-5 py-20 sm:px-6 lg:py-24">
       <div className="relative z-10 mx-auto w-full max-w-7xl space-y-12">
         <div className="section-three__intro mx-auto max-w-3xl space-y-5 text-center">
           <span className="section-three__eyebrow inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em]">

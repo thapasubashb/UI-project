@@ -115,11 +115,7 @@ const Section2 = () => {
   const activeItem = features[activeFeature] || features[0];
 
   return (
-    <section className="section-two relative w-full overflow-hidden px-5 py-20 sm:px-6 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(23,32,51,0.04)_1px,transparent_1px),linear-gradient(30deg,rgba(23,32,51,0.03)_1px,transparent_1px)] bg-[size:5rem_5rem]" />
-      <div className="pointer-events-none absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-[#f2d98a]/35 blur-3xl" />
-      <div className="pointer-events-none absolute left-10 top-12 h-36 w-36 rounded-full bg-[#aadcff]/30 blur-3xl" />
-
+    <section className="section-two relative w-full px-5 py-20 sm:px-6 lg:py-24">
       <div className="relative z-10 mx-auto w-full max-w-7xl space-y-12">
         <div className="section-two__intro max-w-3xl space-y-5">
           <span className="section-two__eyebrow inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em]">

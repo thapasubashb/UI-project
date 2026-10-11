@@ -4,18 +4,6 @@
   color: #f5f6f8;
 }
 
-.section-two > .pointer-events-none:first-child {
-  opacity: 0.28;
-}
-
-.section-two > .pointer-events-none:nth-child(2) {
-  background-color: rgba(223, 139, 95, 0.1);
-}
-
-.section-two > .pointer-events-none:nth-child(3) {
-  background-color: rgba(120, 168, 204, 0.08);
-}
-
 .section-two__intro {
   margin-bottom: 3.2rem;
 }
