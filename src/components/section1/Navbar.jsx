@@ -2,20 +2,22 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="relative z-10 flex items-center justify-between py-7">
-      <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#172033] text-sm font-bold text-white">
-          S
+    <nav className="section-one__nav">
+      <div className="section-one__brand">
+        <span className="section-one__brand-mark" aria-hidden="true">
+          <span />
         </span>
-        <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-[#172033]">
-          Target audience
-        </h4>
+        <div>
+          <p className="section-one__brand-name">ATLAS</p>
+          <p className="section-one__brand-caption">Audience intelligence</p>
+        </div>
       </div>
 
-      <button className="rounded-full border border-[#172033]/15 bg-white/70 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-[#172033] shadow-sm backdrop-blur transition hover:border-[#172033]/40 hover:bg-white">
+      <span className="section-one__nav-chip">
+        <span className="section-one__live-dot" />
         Digital banking platform
-      </button>
-    </div>
+      </span>
+    </nav>
   );
 };
 

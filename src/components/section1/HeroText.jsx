@@ -2,33 +2,41 @@ import React from "react";
 
 const HeroText = () => {
   return (
-    <div className="w-full max-w-xl p-1 md:p-0">
-      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#e1873d]/20 bg-[#fffaf2] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#e1873d] shadow-sm">
-        <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
-        01 / Target audience
+    <div className="section-one__hero w-full max-w-xl p-1 md:p-0">
+      <div className="section-one__eyebrow">
+        <span className="section-one__eyebrow-index">01</span>
+        <span className="section-one__eyebrow-rule" />
+        Target audience
       </div>
 
-      <h3 className="mb-5 text-4xl font-black leading-[0.9] tracking-[-0.05em] text-[#172033] sm:text-5xl md:text-6xl xl:text-7xl">
-        <span className="inline-block text-[#e1873d]">Prospective</span>
+      <h1 className="section-one__headline">
+        Find your
         <br />
-        customer
+        <span>next best</span>
         <br />
-        segmentation
-      </h3>
+        customer.
+      </h1>
 
-      <p className="w-full max-w-lg text-base font-medium leading-7 text-[#526078] md:text-lg">
-        Understand and target the right people with precision. Segment by
-        behavior, demographics, and financial needs to deliver more relevant,
-        trust-driven experiences.
+      <p className="section-one__description">
+        A clearer picture of the people behind the numbers. Discover meaningful
+        segments and shape banking experiences that feel personal.
       </p>
 
-      <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-        <button className="rounded-full bg-[#172033] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#172033]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2b3b57]">
+      <div className="section-one__metrics" aria-label="Audience overview">
+        <div><strong>03</strong><span>Core segments</span></div>
+        <span className="section-one__metric-divider" />
+        <div><strong>360°</strong><span>Customer view</span></div>
+      </div>
+
+      <div className="mt-7 flex flex-wrap items-center gap-3 sm:gap-4">
+        <a href="#segments" className="section-one__primary-action">
           Explore segments
-        </button>
-        <button className="rounded-full border border-[#172033]/15 bg-white/80 px-5 py-3 text-sm font-bold text-[#172033] transition-all duration-300 hover:border-[#e1873d]/50 hover:text-[#e1873d]">
-          View insights
-        </button>
+          <i className="ri-arrow-right-up-line" aria-hidden="true" />
+        </a>
+        <span className="section-one__trust-note">
+          <i className="ri-shield-check-line" aria-hidden="true" />
+          Insight-led. People-first.
+        </span>
       </div>
     </div>
   );

@@ -4,14 +4,14 @@ import RightContent from "./RightContent";
 
 const Page1content = (props) => {
   return (
-    <div className="relative z-10 mx-auto grid min-h-[85vh] w-full max-w-7xl items-center gap-10 px-5 py-12 sm:px-6 lg:grid-cols-[0.86fr_1.14fr] lg:gap-14 lg:px-8 xl:px-10">
-      <div className="order-1 md:order-1">
+    <main className="section-one__content relative z-10 mx-auto grid w-full max-w-[1440px] items-center gap-12 px-5 pb-24 pt-10 sm:px-8 lg:grid-cols-[0.84fr_1.16fr] lg:gap-12 lg:px-12 lg:pb-28 lg:pt-8">
+      <div className="order-1">
         <LeftContent />
       </div>
-      <div className="order-2 md:order-2">
+      <div className="order-2">
         <RightContent users={props.users} />
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,17 +1,26 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Page1content from "./Page1content";
+import "./Section1.css";
 
 const Section1 = (props) => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#f4f7fb] text-[#172033]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(255,217,138,0.34),transparent_28%),radial-gradient(circle_at_10%_70%,rgba(170,220,255,0.32),transparent_32%)]" />
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 xl:px-10">
+    <section className="section-one relative min-h-screen w-full overflow-hidden text-white">
+      <div className="section-one__ambient" aria-hidden="true">
+        <span className="section-one__glow section-one__glow--orange" />
+        <span className="section-one__glow section-one__glow--blue" />
+        <span className="section-one__orb" />
+      </div>
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <Navbar />
       </div>
       <Page1content users={props.users} />
-    </div>
+      <div className="section-one__pagination" aria-label="Slide 1 of 3">
+        <span>01</span>
+        <span className="section-one__pagination-track"><i /></span>
+        <span>03</span>
+      </div>
+    </section>
   );
 };
 
