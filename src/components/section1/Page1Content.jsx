@@ -4,7 +4,7 @@ import RightContent from "./RightContent";
 
 const Page1content = (props) => {
   return (
-    <main className="section-one__content relative z-10 mx-auto grid w-full max-w-[1440px] items-center gap-12 px-5 pb-24 pt-10 sm:px-8 lg:grid-cols-[0.84fr_1.16fr] lg:gap-12 lg:px-12 lg:pb-28 lg:pt-8">
+    <main className="section-one__content relative z-10 mx-auto grid w-full max-w-[1440px] items-center gap-12 px-5 pb-20 pt-10 sm:px-8 lg:grid-cols-[0.84fr_1.16fr] lg:gap-12 lg:px-12 lg:pb-24 lg:pt-8">
       <div className="order-1">
         <LeftContent />
       </div>

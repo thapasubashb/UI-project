@@ -18,18 +18,19 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
 }
 
 body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    background: #f4f7fb;
+    background: #090b10;
 }
 
 ::selection {
-    background: rgba(225, 135, 61, 0.22);
-    color: #172033;
+    background: rgba(239, 160, 120, 0.28);
+    color: #fff;
 }
 
 button,
@@ -49,4 +50,24 @@ img {
 
 #right::-webkit-scrollbar {
     display: none;
+}
+
+.site-flow {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    min-height: 100vh;
+    background: #090b10;
+    color: #f5f6f8;
+}
+
+.site-flow__ambient {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 78% 14%, rgba(219, 128, 84, 0.1), transparent 36%),
+        radial-gradient(ellipse at 16% 70%, rgba(79, 125, 175, 0.1), transparent 39%),
+        linear-gradient(128deg, #090b10 4%, #11141b 52%, #090b11 100%);
 }

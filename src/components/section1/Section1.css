@@ -1,8 +1,6 @@
 .section-one {
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 73% 40%, rgba(50, 58, 77, 0.42), transparent 38%),
-    linear-gradient(128deg, #080a0f 4%, #10131a 50%, #080a10 100%);
+  background: transparent;
 }
 
 .section-one__ambient {
@@ -159,7 +157,7 @@
 }
 
 .section-one__content {
-  min-height: calc(100svh - 6rem);
+  padding-top: clamp(2rem, 5vw, 4rem);
 }
 
 .section-one__hero {

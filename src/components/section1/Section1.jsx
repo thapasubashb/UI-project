@@ -5,7 +5,7 @@ import "./Section1.css";
 
 const Section1 = (props) => {
   return (
-    <section className="section-one relative min-h-screen w-full overflow-hidden text-white">
+    <section className="section-one relative w-full overflow-hidden text-white">
       <div className="section-one__ambient" aria-hidden="true">
         <span className="section-one__glow section-one__glow--orange" />
         <span className="section-one__glow section-one__glow--blue" />

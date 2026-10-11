@@ -26,11 +26,12 @@ const App = () => {
     },
   ];
   return (
-    <>
+    <main className="site-flow">
+      <div className="site-flow__ambient" aria-hidden="true" />
       <Section1 users={users} />
       <Section2 />
       <Section3 />
-    </>
+    </main>
   );
 };
 

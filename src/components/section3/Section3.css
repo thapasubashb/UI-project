@@ -1,9 +1,6 @@
 .section-three {
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 18% 75%, rgba(78, 123, 174, 0.13), transparent 34%),
-    radial-gradient(ellipse at 82% 15%, rgba(218, 125, 81, 0.14), transparent 33%),
-    linear-gradient(128deg, #090b10 4%, #11141b 52%, #090b11 100%);
+  background: transparent;
   color: #f5f6f8;
 }
 
