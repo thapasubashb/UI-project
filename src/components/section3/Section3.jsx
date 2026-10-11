@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Section3.css";
 
 const Section3 = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -39,24 +40,24 @@ const Section3 = () => {
   ];
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#f4f7fb] px-5 py-24 text-[#172033] sm:px-6">
+    <section className="section-three relative flex min-h-screen w-full items-center justify-center overflow-hidden px-5 py-24 sm:px-6">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(23,32,51,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,32,51,0.08)_1px,transparent_1px)] [background-size:4rem_4rem]" />
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#aadcff]/45 blur-3xl" />
       <div className="pointer-events-none absolute -right-10 top-10 h-52 w-52 rounded-full bg-[#f2d98a]/35 blur-3xl" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl space-y-12">
-        <div className="mx-auto max-w-3xl space-y-5 text-center">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#e1873d]">
+        <div className="section-three__intro mx-auto max-w-3xl space-y-5 text-center">
+          <span className="section-three__eyebrow inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em]">
             <span className="h-2 w-2 rounded-full bg-[#e1873d]" />
             03 / Built to last
           </span>
 
-          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-[1.02] tracking-[-0.05em] text-[#172033] sm:text-5xl lg:text-6xl">
+          <h2 className="section-three__title mx-auto max-w-4xl text-4xl font-bold leading-[1.02] tracking-[-0.05em] sm:text-5xl lg:text-6xl">
             Designed for clarity.
-            <br /> <span className="text-[#e1873d]">Ready for momentum.</span>
+            <br /> <span>Ready for momentum.</span>
           </h2>
 
-          <p className="mx-auto max-w-2xl text-base leading-7 text-[#526078] md:text-lg">
+          <p className="section-three__description mx-auto max-w-2xl text-base leading-7 md:text-lg">
             A thoughtful foundation for teams that want every customer
             touchpoint to feel considered.
           </p>
@@ -69,53 +70,37 @@ const Section3 = () => {
                 key={idx}
                 onClick={() => setActiveTab(idx)}
                 aria-pressed={activeTab === idx}
-                className={`group w-full rounded-[1.5rem] border p-6 text-left transition-all duration-300 hover:-translate-y-0.5 ${
-                  activeTab === idx
-                    ? "border-[#172033] bg-[#172033] text-white shadow-[0_26px_60px_-25px_rgba(23,32,51,0.55)]"
-                    : "border-[#172033]/10 bg-white/75 hover:border-[#e1873d]/60 hover:bg-white"
-                }`}
+                className="section-three__tab group w-full rounded-[1.5rem] border p-6 text-left transition-all duration-300 hover:-translate-y-0.5"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span
-                    className={`rounded-full border px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] transition-all ${
-                      activeTab === idx
-                        ? "border-[#f2d98a] bg-[#f2d98a] text-[#172033]"
-                        : "border-[#172033]/10 bg-[#aadcff]/35 text-[#526078] group-hover:bg-[#aadcff]/55"
-                    }`}
+                    className="section-three__tab-tag rounded-full border px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] transition-all"
                   >
                     {feature.tag}
                   </span>
-                  <span
-                    className={`text-sm font-bold transition-colors ${
-                      activeTab === idx ? "text-[#f2d98a]" : "text-[#e1873d]"
-                    }`}
-                  >
+                  <span className="section-three__tab-number text-sm font-bold transition-colors">
                     0{idx + 1}
                   </span>
                 </div>
-                <h3
-                  className={`text-xl font-bold transition-colors ${activeTab === idx ? "text-white" : "text-[#172033] group-hover:text-[#e1873d]"}`}
-                >
+                <h3 className="section-three__tab-title text-xl font-bold transition-colors">
                   {feature.title}
                 </h3>
-                <p
-                  className={`mt-3 hidden text-sm leading-6 transition-colors sm:block ${activeTab === idx ? "text-slate-300" : "text-[#526078]"}`}
-                >
+                <p className="section-three__tab-description mt-3 hidden text-sm leading-6 transition-colors sm:block">
                   {feature.description}
                 </p>
               </button>
             ))}
 
             <div className="pt-2">
-              <button className="w-full rounded-xl bg-[#e1873d] px-6 py-3 text-center font-bold text-white shadow-lg shadow-[#e1873d]/20 transition-all duration-300 hover:bg-[#c96f2e] active:scale-95">
+              <button className="section-three__get-started w-full rounded-xl px-6 py-3 text-center font-bold transition-all duration-300 active:scale-95">
                 Get Started
               </button>
             </div>
           </div>
 
-          <div className="relative flex min-h-[400px] flex-col justify-center rounded-[2rem] border border-[#172033]/10 bg-white/80 p-7 shadow-[0_28px_80px_-34px_rgba(23,32,51,0.45)] md:p-9 lg:p-10">
+          <div className="section-three__detail relative flex min-h-[400px] flex-col justify-center rounded-[2rem] border p-7 md:p-9 lg:p-10">
             <div className="mb-8 flex items-center gap-5 sm:gap-6">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[1.25rem] bg-[#aadcff] text-[#172033] shadow-[0_18px_28px_-16px_rgba(84,160,255,0.8)]">
+              <div className="section-three__icon flex h-16 w-16 shrink-0 items-center justify-center rounded-[1.25rem]">
                 <svg
                   className="h-8 w-8"
                   fill="none"
@@ -126,30 +111,30 @@ const Section3 = () => {
                 </svg>
               </div>
               <div className="flex-1">
-                <span className="inline-block rounded-full bg-[#aadcff]/45 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#526078]">
+                <span className="section-three__selected inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.18em]">
                   Selected focus
                 </span>
-                <h3 className="mt-2 text-3xl font-bold leading-tight text-[#172033] sm:text-4xl">
+                <h3 className="section-three__detail-title mt-2 text-3xl font-bold leading-tight sm:text-4xl">
                   {features[activeTab].title}
                 </h3>
               </div>
             </div>
 
-            <p className="mb-6 text-lg font-medium leading-8 text-[#526078]">
+            <p className="section-three__detail-description mb-6 text-lg font-medium leading-8">
               {features[activeTab].description}
             </p>
 
-            <div className="rounded-2xl border border-[#172033]/10 bg-[linear-gradient(135deg,#f7fafd_0%,#eef4ff_100%)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
-              <p className="text-base leading-7 text-[#526078]">
+            <div className="section-three__detail-note rounded-2xl border p-4">
+              <p className="text-base leading-7">
                 {features[activeTab].detail}
               </p>
             </div>
 
             <div className="mt-auto flex flex-col gap-4 pt-8 sm:flex-row">
-              <button className="flex-1 rounded-xl bg-[#172033] px-6 py-3.5 font-bold text-white shadow-lg shadow-[#172033]/20 transition-all hover:bg-[#2b3b57] active:scale-95">
+              <button className="section-three__primary-action flex-1 rounded-xl px-6 py-3.5 font-bold transition-all active:scale-95">
                 Explore docs
               </button>
-              <button className="flex-1 rounded-xl border-2 border-[#172033]/20 bg-transparent px-6 py-3.5 font-bold text-[#172033] transition-all hover:border-[#e1873d] hover:text-[#e1873d]">
+              <button className="section-three__secondary-action flex-1 rounded-xl border px-6 py-3.5 font-bold transition-all">
                 Start Trial
               </button>
             </div>
