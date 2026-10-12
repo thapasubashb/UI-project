@@ -63,12 +63,12 @@ const Section2 = () => {
             <span className="slide-one__hint">YOUR CITY. YOUR CALL.</span>
           </div>
 
-          <div className="slide-one__status" aria-label="Current slide, 1 of 3">
-            <span className="slide-one__status-current">01</span>
+          <div className="slide-one__status" aria-label="Current slide, 2 of 5">
+            <span className="slide-one__status-current">02</span>
             <span className="slide-one__status-track">
               <span />
             </span>
-            <span>03</span>
+            <span>05</span>
             <span className="slide-one__status-label">ORIGIN STORY</span>
           </div>
         </div>

@@ -29,14 +29,14 @@ const Section3 = () => {
   const [activeDistrict, setActiveDistrict] = useState(districts[0]);
 
   return (
-    <section className="section-three slide-two" aria-labelledby="slide-two-title">
+    <section id="city-signals" className="section-three slide-two" aria-labelledby="slide-two-title">
       <div className="slide-two__halo" aria-hidden="true" />
 
       <div className="slide-two__layout">
         <div className="slide-two__copy">
           <p className="slide-two__eyebrow">
             <span className="slide-two__live-dot" />
-            02 / THE CITY PULSE
+            03 / THE CITY PULSE
           </p>
           <h2 id="slide-two-title" className="slide-two__title">
             EVERY BLOCK
@@ -56,12 +56,12 @@ const Section3 = () => {
             </p>
           </div>
 
-          <div className="slide-two__progress" aria-label="Current slide, 2 of 3">
-            <span className="slide-two__progress-active">02</span>
+          <div className="slide-two__progress" aria-label="Current slide, 3 of 5">
+            <span className="slide-two__progress-active">03</span>
             <span className="slide-two__progress-line">
               <span />
             </span>
-            <span>03</span>
+            <span>05</span>
             <span className="slide-two__progress-caption">THE CITY PULSE</span>
           </div>
         </div>

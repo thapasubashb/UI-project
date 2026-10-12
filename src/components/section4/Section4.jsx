@@ -30,7 +30,7 @@ const Section4 = () => {
 
           <p className="slide-three__eyebrow">
             <span />
-            03 / YOUR FRIENDLY NEIGHBOR
+            04 / YOUR FRIENDLY NEIGHBOR
           </p>
 
           <h2 id="slide-three-title" className="slide-three__title">
@@ -61,12 +61,12 @@ const Section4 = () => {
             </svg>
           </button>
 
-          <div className="slide-three__progress" aria-label="Current slide, 3 of 3">
-            <span>03</span>
+          <div className="slide-three__progress" aria-label="Current slide, 4 of 5">
+            <span>04</span>
             <span className="slide-three__progress-track">
               <span />
             </span>
-            <span>03</span>
+            <span>05</span>
             <span className="slide-three__progress-caption">END OF THE BEGINNING</span>
           </div>
         </div>
@@ -157,7 +157,7 @@ const Section4 = () => {
 
       <div className="slide-three__footer">
         <span>THE CITY IS NEVER REALLY ALONE.</span>
-        <span>A FRIENDLY NEIGHBORHOOD STORY&nbsp; · &nbsp;03 / 03</span>
+        <span>A FRIENDLY NEIGHBORHOOD STORY&nbsp; · &nbsp;04 / 05</span>
       </div>
     </section>
   );

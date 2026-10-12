@@ -245,7 +245,7 @@
 
 .slide-three__progress-track span {
   display: block;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background: linear-gradient(90deg, #ff4058, #ff9ba3);
   box-shadow: 0 0 10px rgba(255, 69, 92, 0.7);
