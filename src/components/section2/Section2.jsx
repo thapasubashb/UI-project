@@ -151,7 +151,7 @@ const Section2 = () => {
       <div className="slide-one__bottomline">
         <span>AN ORIGINAL WEB-SLINGER STORY</span>
         <span className="slide-one__bottomline-right">BROOKLYN · MANHATTAN · QUEENS</span>
-      </div>
+       </div>
     </section>
   );
 };
