@@ -1,5 +1,7 @@
 .slide-two {
   --slide-two-red: #ff5369;
+  --slide-two-cyan: #78dded;
+  --slide-two-glass-edge: rgba(202, 235, 255, 0.22);
   position: relative;
   display: flex;
   min-height: max(44rem, 100svh);
@@ -9,9 +11,10 @@
   padding: clamp(5.5rem, 8vw, 8rem) clamp(1.25rem, 7vw, 7rem) 2rem;
   isolation: isolate;
   background:
-    radial-gradient(ellipse at 78% 47%, rgba(48, 78, 133, 0.31), transparent 38rem),
-    radial-gradient(ellipse at 15% 12%, rgba(147, 24, 49, 0.15), transparent 31rem),
-    linear-gradient(140deg, #0a0d16, #111522 55%, #090c13);
+    radial-gradient(ellipse at 81% 42%, rgba(50, 143, 177, 0.29), transparent 37rem),
+    radial-gradient(ellipse at 14% 12%, rgba(112, 69, 177, 0.25), transparent 32rem),
+    radial-gradient(ellipse at 48% 100%, rgba(27, 85, 147, 0.2), transparent 35rem),
+    linear-gradient(140deg, #0a0d1b, #12172a 55%, #090c17);
   color: #f7f7fb;
 }
 
@@ -33,9 +36,9 @@
   right: -13rem;
   width: min(70vw, 65rem);
   aspect-ratio: 1;
-  border: 1px solid rgba(215, 229, 255, 0.06);
+  border: 1px solid rgba(120, 221, 237, 0.12);
   border-radius: 50%;
-  box-shadow: 0 0 0 5rem rgba(214, 228, 255, 0.013), 0 0 0 10rem rgba(214, 228, 255, 0.01);
+  box-shadow: 0 0 0 5rem rgba(120, 221, 237, 0.025), 0 0 0 10rem rgba(183, 149, 255, 0.018);
   animation: slide-two-halo-drift 32s linear infinite;
   pointer-events: none;
 }
@@ -95,10 +98,10 @@
 
 .slide-two__title span {
   color: transparent;
-  background: linear-gradient(100deg, #ffc0c5, #ff5369 54%, #a41638);
+  background: linear-gradient(105deg, #d7faff 4%, #78dded 44%, #8ba9ff 75%, #c398ff 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  filter: drop-shadow(0 10px 34px rgba(231, 43, 71, 0.18));
+  filter: drop-shadow(0 10px 34px rgba(76, 182, 218, 0.2));
 }
 
 .slide-two__description {
@@ -112,8 +115,15 @@
 .slide-two__mission {
   max-width: 27rem;
   margin-top: 2rem;
-  padding: 1rem 0 0 1.15rem;
-  border-left: 1px solid rgba(255, 94, 113, 0.72);
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--slide-two-glass-edge);
+  border-left: 2px solid rgba(255, 94, 113, 0.8);
+  border-radius: 0.35rem 1rem 1rem 0.35rem;
+  background:
+    linear-gradient(120deg, rgba(131, 190, 235, 0.1), rgba(255, 255, 255, 0.025)),
+    rgba(12, 17, 33, 0.32);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 14px 35px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(18px) saturate(145%);
 }
 
 .slide-two__mission-index {
@@ -159,8 +169,8 @@
   display: block;
   width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, #ff4058, #ff9ba3);
-  box-shadow: 0 0 10px rgba(255, 69, 92, 0.7);
+  background: linear-gradient(90deg, #7addf0, #b8a2ff);
+  box-shadow: 0 0 10px rgba(94, 202, 233, 0.58);
 }
 
 .slide-two__progress-caption {
@@ -171,16 +181,17 @@
 
 .slide-two__map-wrap {
   padding: clamp(1rem, 2.8vw, 2rem);
-  border: 1px solid rgba(236, 242, 255, 0.17);
+  border: 1px solid var(--slide-two-glass-edge);
   border-radius: 2rem;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.025)),
-    rgba(12, 16, 27, 0.46);
+    linear-gradient(145deg, rgba(220, 246, 255, 0.13), rgba(151, 168, 255, 0.035) 52%, rgba(255, 255, 255, 0.025)),
+    rgba(12, 16, 32, 0.48);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.21),
-    inset 0 0 70px rgba(127, 157, 214, 0.035),
-    0 30px 90px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(27px) saturate(135%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 70px rgba(115, 202, 234, 0.07),
+    0 30px 90px rgba(0, 0, 0, 0.3),
+    0 0 60px rgba(71, 149, 206, 0.08);
+  backdrop-filter: blur(30px) saturate(150%);
   animation: slide-two-map-enter 900ms cubic-bezier(0.2, 0.75, 0.25, 1) 100ms both;
 }
 
@@ -212,14 +223,15 @@
   align-items: center;
   gap: 0.55rem;
   padding: 0.55rem 0.72rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(120, 221, 237, 0.2);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.055);
+  background: linear-gradient(135deg, rgba(120, 221, 237, 0.12), rgba(255, 255, 255, 0.045));
   color: rgba(239, 243, 251, 0.82);
   font-size: 0.55rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px) saturate(150%);
 }
 
 .slide-two__map-status .slide-two__live-dot {
@@ -234,10 +246,10 @@
   border: 1px solid rgba(219, 231, 252, 0.13);
   border-radius: 1.35rem;
   background:
-    linear-gradient(rgba(164, 192, 241, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(164, 192, 241, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse at 48% 48%, rgba(43, 78, 132, 0.25), transparent 66%),
-    rgba(8, 13, 23, 0.66);
+    linear-gradient(rgba(164, 206, 241, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(164, 206, 241, 0.055) 1px, transparent 1px),
+    radial-gradient(ellipse at 48% 48%, rgba(57, 124, 166, 0.23), transparent 66%),
+    linear-gradient(145deg, rgba(23, 39, 68, 0.78), rgba(9, 14, 28, 0.84));
   background-size: 30px 30px, 30px 30px, auto, auto;
 }
 
@@ -416,13 +428,13 @@
   gap: 0.9rem;
   margin-top: 0.85rem;
   padding: 0.9rem 1rem;
-  border: 1px solid rgba(234, 241, 255, 0.14);
+  border: 1px solid rgba(202, 235, 255, 0.17);
   border-radius: 1rem;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025)),
-    rgba(255, 255, 255, 0.025);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(19px);
+    linear-gradient(120deg, rgba(119, 202, 229, 0.1), rgba(255, 255, 255, 0.035)),
+    rgba(13, 20, 37, 0.34);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 12px 30px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(23px) saturate(145%);
   animation: slide-two-intel-in 350ms ease both;
 }
 
