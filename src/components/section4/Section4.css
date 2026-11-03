@@ -54,8 +54,8 @@
   min-height: 34rem;
   margin: 0 auto;
   align-items: center;
-  gap: clamp(2.5rem, 6vw, 7rem);
-  grid-template-columns: minmax(19rem, 0.9fr) minmax(25rem, 1.1fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 }
 
 .slide-three__copy {
@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  margin-bottom: clamp(3.5rem, 8vh, 6.5rem);
+  margin-bottom: clamp(2.5rem, 5.5vh, 4.5rem);
   color: rgba(233, 238, 249, 0.63);
   font-size: 0.62rem;
   font-weight: 750;
@@ -121,7 +121,7 @@
 .slide-three__title {
   margin: 0;
   font-family: Impact, "Arial Narrow", "Trebuchet MS", sans-serif;
-  font-size: clamp(4.4rem, 9vw, 8.5rem);
+  font-size: clamp(4rem, 8vw, 7.6rem);
   font-weight: 900;
   line-height: 0.83;
   letter-spacing: -0.055em;
@@ -264,11 +264,11 @@
   position: relative;
   min-height: clamp(32rem, 65vh, 45rem);
   overflow: hidden;
-  border: 1px solid var(--slide-three-glass-edge);
+  border: 1px solid rgba(255, 222, 194, 0.32);
   border-radius: 48% 48% 1.8rem 1.8rem / 44% 44% 1.8rem 1.8rem;
   background:
-    radial-gradient(ellipse at 51% 63%, rgba(235, 131, 102, 0.2), transparent 49%),
-    radial-gradient(ellipse at 68% 30%, rgba(141, 114, 169, 0.2), transparent 44%),
+    radial-gradient(ellipse at 51% 63%, rgba(235, 131, 102, 0.25), transparent 49%),
+    radial-gradient(ellipse at 68% 30%, rgba(141, 114, 169, 0.24), transparent 44%),
     linear-gradient(165deg, rgba(255, 242, 226, 0.09), transparent 47%),
     linear-gradient(180deg, rgba(34, 27, 46, 0.63), rgba(15, 12, 25, 0.72));
   box-shadow:
@@ -404,6 +404,7 @@
   bottom: clamp(1rem, 4vw, 2rem);
   left: clamp(1rem, 4vw, 2rem);
   display: flex;
+  max-width: calc(100% - 2rem);
   min-height: 4.6rem;
   align-items: center;
   gap: 0.75rem;
@@ -499,6 +500,7 @@
 .slide-three__footer {
   width: min(100%, 90rem);
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: auto auto 0;
   padding-top: 1.5rem;
@@ -603,19 +605,19 @@
   .slide-three__layout {
     min-height: 0;
     gap: clamp(2rem, 4vw, 3rem);
-    grid-template-columns: minmax(18rem, 0.9fr) minmax(21rem, 1.1fr);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   }
 
   .slide-three__title {
-    font-size: clamp(4rem, 9.5vw, 6.4rem);
+    font-size: clamp(3.4rem, 7.8vw, 5.5rem);
   }
 
   .slide-three__scene {
-    min-height: clamp(29rem, 64vw, 38rem);
+    min-height: clamp(27rem, 58vw, 36rem);
   }
 
   .slide-three__closing {
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2.5rem, 5vh, 3.5rem);
   }
 }
 
@@ -639,7 +641,7 @@
   }
 
   .slide-three__title {
-    font-size: clamp(4.1rem, 18.4vw, 6.8rem);
+    font-size: clamp(3.7rem, 16.8vw, 5.75rem);
   }
 
   .slide-three__description {
@@ -696,9 +698,21 @@
   }
 
   .slide-three__footer {
+    gap: 0.6rem 1rem;
     padding-top: 1rem;
     font-size: 0.46rem;
     letter-spacing: 0.11em;
+  }
+
+  .slide-three__footer span:last-child {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+@media (max-width: 380px) {
+  .slide-three__note-live {
+    display: none;
   }
 }
 
