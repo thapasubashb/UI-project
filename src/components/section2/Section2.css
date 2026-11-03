@@ -87,7 +87,7 @@
 
 .slide-one__topline {
   gap: 0.7rem;
-  margin-bottom: clamp(3.75rem, 8vh, 6.5rem);
+  margin-bottom: clamp(2.5rem, 5.5vh, 4.5rem);
   color: rgba(233, 238, 249, 0.65);
   font-size: 0.64rem;
   font-weight: 700;
@@ -155,7 +155,7 @@
 .slide-one__title {
   margin: 0;
   font-family: Impact, "Arial Narrow", "Trebuchet MS", sans-serif;
-  font-size: clamp(4.5rem, 9.6vw, 9.1rem);
+  font-size: clamp(4.25rem, 8.4vw, 8.4rem);
   font-weight: 900;
   line-height: 0.82;
   letter-spacing: -0.055em;
@@ -171,8 +171,8 @@
 }
 
 .slide-one__description {
-  max-width: 27rem;
-  margin: 1.7rem 0 0;
+  max-width: 25rem;
+  margin: 1.5rem 0 0;
   color: rgba(232, 237, 248, 0.67);
   font-size: clamp(0.96rem, 1.25vw, 1.1rem);
   line-height: 1.85;
@@ -290,10 +290,10 @@
   position: relative;
   min-height: clamp(32rem, 66vh, 46rem);
   overflow: hidden;
-  border: 1px solid rgba(219, 231, 255, 0.23);
+  border: 1px solid rgba(219, 231, 255, 0.3);
   border-radius: 48% 48% 1.8rem 1.8rem / 44% 44% 1.8rem 1.8rem;
   background:
-    radial-gradient(ellipse at 51% 40%, rgba(105, 138, 218, 0.24), transparent 48%),
+    radial-gradient(ellipse at 51% 38%, rgba(105, 138, 218, 0.3), transparent 48%),
     radial-gradient(ellipse at 50% 100%, rgba(188, 48, 93, 0.2), transparent 48%),
     linear-gradient(165deg, rgba(255, 255, 255, 0.1), transparent 47%),
     linear-gradient(180deg, rgba(22, 31, 58, 0.62), rgba(11, 12, 27, 0.68));
@@ -614,19 +614,20 @@
 
   .slide-one__layout {
     min-height: 0;
-    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   }
 
   .slide-one__title {
-    font-size: clamp(4rem, 10vw, 6.5rem);
+    font-size: clamp(3.5rem, 8vw, 5.8rem);
   }
 
   .slide-one__scene {
-    min-height: clamp(29rem, 65vw, 38rem);
+    min-height: clamp(26rem, 55vw, 36rem);
   }
 
   .slide-one__topline {
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2.5rem, 6vh, 3.5rem);
     font-size: 0.55rem;
   }
 
@@ -655,7 +656,7 @@
   }
 
   .slide-one__title {
-    font-size: clamp(4.1rem, 20vw, 7rem);
+    font-size: clamp(3.75rem, 17vw, 5.75rem);
   }
 
   .slide-one__description {
@@ -698,12 +699,14 @@
   }
 
   .slide-one__bottomline {
+    flex-wrap: wrap;
     padding-top: 1rem;
     font-size: 0.48rem;
     letter-spacing: 0.12em;
   }
 
   .slide-one__bottomline-right {
+    margin-left: auto;
     text-align: right;
   }
 }
