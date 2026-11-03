@@ -48,8 +48,8 @@
   width: min(100%, 90rem);
   margin: 0 auto;
   align-items: center;
-  gap: clamp(3rem, 7vw, 8rem);
-  grid-template-columns: minmax(18rem, 0.78fr) minmax(25rem, 1.22fr);
+  gap: clamp(2.5rem, 5vw, 6rem);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
 }
 
 .slide-two__copy {
@@ -90,10 +90,10 @@
 .slide-two__title {
   margin: 0;
   font-family: Impact, "Arial Narrow", "Trebuchet MS", sans-serif;
-  font-size: clamp(3.8rem, 7.5vw, 7rem);
+  font-size: clamp(3.6rem, 6.7vw, 6.5rem);
   font-weight: 900;
   line-height: 0.87;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.055em;
 }
 
 .slide-two__title span {
@@ -181,15 +181,15 @@
 
 .slide-two__map-wrap {
   padding: clamp(1rem, 2.8vw, 2rem);
-  border: 1px solid var(--slide-two-glass-edge);
+  border: 1px solid rgba(202, 235, 255, 0.3);
   border-radius: 2rem;
   background:
-    linear-gradient(145deg, rgba(220, 246, 255, 0.13), rgba(151, 168, 255, 0.035) 52%, rgba(255, 255, 255, 0.025)),
-    rgba(12, 16, 32, 0.48);
+    linear-gradient(145deg, rgba(220, 246, 255, 0.16), rgba(151, 168, 255, 0.045) 52%, rgba(255, 255, 255, 0.025)),
+    rgba(12, 16, 32, 0.62);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    inset 0 0 70px rgba(115, 202, 234, 0.07),
-    0 30px 90px rgba(0, 0, 0, 0.3),
+    inset 0 0 70px rgba(115, 202, 234, 0.09),
+    0 30px 90px rgba(0, 0, 0, 0.36),
     0 0 60px rgba(71, 149, 206, 0.08);
   backdrop-filter: blur(30px) saturate(150%);
   animation: slide-two-map-enter 900ms cubic-bezier(0.2, 0.75, 0.25, 1) 100ms both;
@@ -339,6 +339,7 @@
 }
 
 .slide-two__node {
+  --node-accent: #ff6175;
   position: absolute;
   z-index: 2;
   display: grid;
@@ -346,10 +347,10 @@
   height: 2.2rem;
   padding: 0;
   place-items: center;
-  border: 1px solid rgba(255, 103, 122, 0.44);
+  border: 1px solid color-mix(in srgb, var(--node-accent) 54%, transparent);
   border-radius: 50%;
-  background: rgba(255, 69, 91, 0.1);
-  box-shadow: 0 0 22px rgba(255, 61, 86, 0.12), inset 0 1px rgba(255, 255, 255, 0.17);
+  background: color-mix(in srgb, var(--node-accent) 12%, transparent);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--node-accent) 15%, transparent), inset 0 1px rgba(255, 255, 255, 0.17);
   cursor: pointer;
   backdrop-filter: blur(12px);
   transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
@@ -359,14 +360,14 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: #ff6175;
-  box-shadow: 0 0 11px rgba(255, 74, 97, 0.8);
+  background: var(--node-accent);
+  box-shadow: 0 0 11px color-mix(in srgb, var(--node-accent) 80%, transparent);
 }
 
 .slide-two__node::after {
   position: absolute;
   inset: -0.4rem;
-  border: 1px solid rgba(255, 91, 111, 0.42);
+  border: 1px solid color-mix(in srgb, var(--node-accent) 52%, transparent);
   border-radius: 50%;
   animation: slide-two-node-pulse 2.5s ease-out infinite;
   content: "";
@@ -376,9 +377,9 @@
 .slide-two__node:hover,
 .slide-two__node.is-active {
   transform: scale(1.13);
-  border-color: rgba(255, 222, 226, 0.82);
-  background: rgba(255, 69, 91, 0.3);
-  box-shadow: 0 0 30px rgba(255, 61, 86, 0.28), inset 0 1px rgba(255, 255, 255, 0.3);
+  border-color: color-mix(in srgb, var(--node-accent) 78%, white);
+  background: color-mix(in srgb, var(--node-accent) 28%, transparent);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--node-accent) 34%, transparent), inset 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .slide-two__node:focus-visible {
@@ -387,16 +388,19 @@
 }
 
 .slide-two__node--brooklyn {
+  --node-accent: #ff6175;
   bottom: 30%;
   left: 28%;
 }
 
 .slide-two__node--queens {
+  --node-accent: #78dded;
   top: 32%;
   right: 24%;
 }
 
 .slide-two__node--manhattan {
+  --node-accent: #c398ff;
   top: 22%;
   left: 57%;
 }
@@ -528,6 +532,7 @@
 .slide-two__footer {
   width: min(100%, 90rem);
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: auto auto 0;
   padding-top: 1.5rem;
@@ -630,12 +635,16 @@
   }
 
   .slide-two__layout {
-    gap: 3rem;
-    grid-template-columns: minmax(16rem, 0.75fr) minmax(22rem, 1.25fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   }
 
   .slide-two__title {
-    font-size: clamp(3.5rem, 8vw, 5.8rem);
+    font-size: clamp(3rem, 6.6vw, 4.5rem);
+  }
+
+  .slide-two__map {
+    min-height: clamp(18rem, 38vw, 25rem);
   }
 }
 
@@ -651,7 +660,7 @@
   }
 
   .slide-two__title {
-    font-size: clamp(3.7rem, 16vw, 6rem);
+    font-size: clamp(3.45rem, 15vw, 5.5rem);
   }
 
   .slide-two__description {
@@ -688,9 +697,15 @@
   }
 
   .slide-two__footer {
+    gap: 0.6rem 1rem;
     padding-top: 1.1rem;
     font-size: 0.48rem;
     letter-spacing: 0.12em;
+  }
+
+  .slide-two__footer span:last-child {
+    margin-left: auto;
+    text-align: right;
   }
 }
 
